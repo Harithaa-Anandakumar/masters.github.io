@@ -1,0 +1,133 @@
+---
+title: "Supplementary"
+output: pdf_document
+---
+
+# Scripts 
+
+
+## FastQC 
+```{r fastqc, eval=FALSE, linewidth=60}
+
+#!/bin/bash
+#SBATCH --job-name="fastqc"
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=24
+#SBATCH --time=2-00:00
+#SBATCH -o fc.o%j
+#SBATCH -e fc.o%j.err
+
+module load FASTQC
+
+#output file location
+output=~/rnaseq/FASTQCresults/
+
+
+#a for loop that loops through the folder 'raw_reads' and passes all files with .fastq.gz extension 
+for file in  ~/rawdata/RNASequencing/raw_reads/*.fastq.gz
+do
+name=${file##*/} #removes the filepath name up until the / of the file name
+base=${name%.fastq.gz}
+
+echo $base && fastqc -t 24 -o ${output} $file
+
+#fastqc -t 6 -o ${output} ${file};
+done
+```
+
+
+## Alignement - HISAT2
+
+
+```{r hisat2, eval=FALSE, linewidth=20}
+
+#!/bin/bash
+#SBATCH --job-name="test"
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=0-24:00
+#SBATCH -o 664.o%j
+
+
+#load require modules
+module load HISAT2
+module load SAMTOOLS
+module load EDIRECT
+
+
+#a .txt file containing all the file names 
+samples=/rnaseq/scripts/664.txt
+
+for SAMPLE in $(cat $samples)
+do
+#output directory of where the aligned bam files should go 
+dir2="/rnaseq/bam/664"
+#echoes the file being processed ; split the process into 12 threads ; 
+echo $SAMPLE && hisat2 -p 12
+#-x the position of the genome files indexed by HISAT2
+                       -x ref/genome 
+# -U location of the same files
+                       -U data/${SAMPLE}.fastq.gz | 
+# pipe the output to samtools to sort the file based on coordinates
+    samtools sort > ${dir2}/${SAMPLE}.bam
+done
+
+```
+
+
+## Index the aligned filed
+
+```{r index, eval=FALSE}
+
+#!/bin/bash
+#SBATCH --job-name="test"
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=12
+#SBATCH --time=0-24:00
+#SBATCH -o 664.o%j
+
+#load necessary module
+
+module load SAMTOOLS
+
+
+#for all the SORTED bam files in the current folder, index it using samtools index function
+for bam in $(ls *.bam)
+do
+echo "Indexing: "$bam
+samtools index $bam $bam".bai"
+done
+```
+
+## Abundance estimation 
+
+
+
+```{r, eval=FALSE}
+  #!/bin/bash
+  #SBATCH --job-name="test"
+  #SBATCH --nodes=12
+  #SBATCH --cpus-per-task=1
+  #SBATCH --time=0-12:00
+  #SBATCH -o fc.o%j
+
+  #load necessary module
+  module load SUBREAD
+
+  #for all the sorted and indexed bam files in the folder
+#do abundance estimation and produce ONE count text file for every .bam file
+  for sortedbam in $(ls *.bam)
+  do
+  name=${sortedbam##*/} #removes the filepath name up until the / of the file name
+  base=${name%.bam}
+  echo $base && featureCounts -T 12 #12 threads
+  -g gene_name #use gene name in the output count text file
+  -a ~/refs/Homo_sapiens.GRCh38.96.chr.gtf #reference gtf gile
+  -o ~/rnaseq/counts/"${base}".txt $sortedbam #output location
+  done
+```
+
+
+
+
+Other R scripts can be found at 

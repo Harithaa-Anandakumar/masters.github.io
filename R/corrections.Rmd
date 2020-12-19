@@ -1,0 +1,37 @@
+---
+title: "corrections"
+author: "Harithaa"
+date: "5/18/2020"
+output: html_document
+---
+Kusch:
+
+  1. Remove the central dogma of biology and add a cartoon of RNA sequencing. 
+  2. Add in introduction a part on microbial contaminants in rnaseq? "Why do you expect microbial contamination to occur? This could be mentioned as a crucial problem in the introduction. Which approaches are known to identify impurity problems?" ++
+  3. Talk about steps of rnasequencing in intro?  - "On which basis are you developing this sc-workflow? From scratch? Maybe this is worth an extra chapter in the introduction."
+  4. Aims n Objs - "I am not sure how this is usually handled with AG Zimmermann master thesis: why not explain in some more detail, what you mean by these aims, why you chose them, and how you wanted to approach them?"
+  5. At the end of microbial results - "Is this really very relevant to the results? How much quantitative impact do the putative contaminations have? How large is the impact on normalization?"
+  6. Results and discussion- "In the results and discussion part I  miss a very clear summary of pros and cons of deconvolution. These are a bit hidden in the different parts of the text. "
+
+#####################3
+Zimmermann:
+microbial contamination- cut-off by other people ?
+  
+  PCA:
+  -- What does an additional PCA really tell us?
+  -- PC1 -- can not make the the claim that they are separated by maturity; Overlaped of transcripts, CM and EHMs
+PC1: different complexity of tissuesGeneExpression
+- HUman protein atlas - samples? quality? MYH7 & MYH6 ratio and MYL2 - high in ven and low in atrial.
+Conclude heatmap and pearson; distinguisihing CM from each other as to their biological properties is not possible using PC1, 
+requires a more selective signature of CM specific things 
+-Sarcomeric genes: DMD, what are other genes from sarcomere? Check out genes ! Gene that generates force: cardiac motor proteins; 
+- Rhesus -- difference b/w maturation? composition? -- Bulk part is CMs but there is still some variability. 
+
+Just use RMSE, remove correlation. 
+
+Check references!
+
+###################
+
+  
+  
