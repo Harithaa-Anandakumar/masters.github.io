@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Results and Discussion | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</title>
+  <meta name="description" content="4 Results and Discussion | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Results and Discussion | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Results and Discussion | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  
+  
+  
+
+<meta name="author" content="Harithaa Anandakumar" />
+
+
+<meta name="date" content="2020-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="methods.html"/>
+<link rel="next" href="conclusion-and-future-work.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#need-for-better-therapeutics"><i class="fa fa-check"></i><b>1.1</b> Need for better therapeutics</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#immunological-responses-in-transplantations"><i class="fa fa-check"></i><b>1.1.1</b> Immunological Responses in Transplantations</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#engineered-human-myocardium"><i class="fa fa-check"></i><b>1.2</b> Engineered Human Myocardium</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#cgmp-and-quality-control-of-tissue-engineered-products"><i class="fa fa-check"></i><b>1.2.1</b> cGMP and Quality Control of Tissue Engineered Products</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#rnaseq"><i class="fa fa-check"></i><b>1.3</b> RNA Sequencing</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#bulkrna"><i class="fa fa-check"></i><b>1.3.1</b> Single cell versus bulk RNA Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#compdeconv"><i class="fa fa-check"></i><b>1.4</b> Computational deconvolution</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#exploratory-data-analysis-in-rna-sequencing"><i class="fa fa-check"></i><b>1.5</b> Exploratory Data Analysis in RNA-Sequencing</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#pca"><i class="fa fa-check"></i><b>1.5.1</b> Principal Component Analysis (PCA)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#rationale"><i class="fa fa-check"></i><b>1.6</b> Rationale for the current work</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="aims-and-objectives.html"><a href="aims-and-objectives.html"><i class="fa fa-check"></i><b>2</b> Aims and Objectives</a></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#general-analysis-pipeline-of-bulk-rna-seq-data"><i class="fa fa-check"></i><b>3.1</b> General Analysis Pipeline of Bulk RNA-Seq Data</a></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#singleCell"><i class="fa fa-check"></i><b>3.2</b> Single Cell Reference Data and CIBERSORTX</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="methods.html"><a href="methods.html#processing-of-single-cell-data"><i class="fa fa-check"></i><b>3.2.1</b> Processing of Single Cell Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#analysis-of-rhesus-rna-seq"><i class="fa fa-check"></i><b>3.3</b> Analysis of Rhesus RNA-Seq</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#estBacVir"><i class="fa fa-check"></i><b>3.4</b> Estimating Bacterial and Viral Contaminants</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results-and-discussion.html"><a href="results-and-discussion.html"><i class="fa fa-check"></i><b>4</b> Results and Discussion</a><ul>
+<li class="chapter" data-level="4.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#general-workflow-and-mapping-statistics"><i class="fa fa-check"></i><b>4.1</b> General Workflow and Mapping Statistics</a></li>
+<li class="chapter" data-level="4.2" data-path="results-and-discussion.html"><a href="results-and-discussion.html#exploring-potential-microbial-contamination-using-rna-seq-data"><i class="fa fa-check"></i><b>4.2</b> Exploring Potential Microbial Contamination using RNA-Seq Data</a></li>
+<li class="chapter" data-level="4.3" data-path="results-and-discussion.html"><a href="results-and-discussion.html#global-view-of-the-transcriptomic-data"><i class="fa fa-check"></i><b>4.3</b> Global view of the transcriptomic data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#correlation-amongst-groups"><i class="fa fa-check"></i><b>4.3.1</b> Correlation amongst groups</a></li>
+<li class="chapter" data-level="4.3.2" data-path="results-and-discussion.html"><a href="results-and-discussion.html#gene-level-analysis"><i class="fa fa-check"></i><b>4.3.2</b> Gene-level analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="results-and-discussion.html"><a href="results-and-discussion.html#deconvolution-of-bulk-cms-and-ehms-rna-seq-data"><i class="fa fa-check"></i><b>4.4</b> Deconvolution of Bulk CMs and EHMs RNA-Seq Data</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#limits-of-deconvolution"><i class="fa fa-check"></i><b>4.4.1</b> Limits of deconvolution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="results-and-discussion.html"><a href="results-and-discussion.html#basic-characterisation-of-rhesus-cardiomyocytes"><i class="fa fa-check"></i><b>4.5</b> Basic characterisation of Rhesus Cardiomyocytes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusion-and-future-work.html"><a href="conclusion-and-future-work.html"><i class="fa fa-check"></i><b>5</b> Conclusion and Future Work</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a><ul>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#task-at-hand"><i class="fa fa-check"></i>Task At Hand</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#work-done"><i class="fa fa-check"></i>Work Done</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results-and-discussion" class="section level1">
+<h1><span class="header-section-number">4</span> Results and Discussion</h1>
+<div id="general-workflow-and-mapping-statistics" class="section level2">
+<h2><span class="header-section-number">4.1</span> General Workflow and Mapping Statistics</h2>
+<p>Given that the analysis of RNA-Seq data is multi-faceted with distinct steps, a common work-flow modality was established as shown in Figure <a href="results-and-discussion.html#fig:resWorkFlow">4.1</a>.</p>
+<div class="figure"><span id="fig:resWorkFlow"></span>
+<img src="data/resultsFlowChart.png" alt="A General RNA-Seq Workflow. In general the source material of RNA-Seq is a sample either from patients, cell culture or tissues. After RNA extraction and optional enrichment, they get sequenced at a general sequencing (core) facility. This results in the generation of large files which are transferred to a HPC, where the first steps of alignment and abundance estimation is performed. Smaller count text files containing information on the transcripts and the quanitative amount of expression can then be easily stored in a local database for retrieval and further processing. The final steps of performing the required analysis specific for the question asked can be performed on any statistical environment (such as R) and visualized and deployed for publishing or internal use. Throughout this whole process it is vital to maintain a consistent and common, easy to use metadata collection system. Shapes and their meanings: cylinders (database), rhombus (decision points), rectangles (processes), oval (starting/ending points)." width="100%" />
+<p class="caption">
+Figure 4.1: A General RNA-Seq Workflow. In general the source material of RNA-Seq is a sample either from patients, cell culture or tissues. After RNA extraction and optional enrichment, they get sequenced at a general sequencing (core) facility. This results in the generation of large files which are transferred to a HPC, where the first steps of alignment and abundance estimation is performed. Smaller count text files containing information on the transcripts and the quanitative amount of expression can then be easily stored in a local database for retrieval and further processing. The final steps of performing the required analysis specific for the question asked can be performed on any statistical environment (such as R) and visualized and deployed for publishing or internal use. Throughout this whole process it is vital to maintain a consistent and common, easy to use metadata collection system. Shapes and their meanings: cylinders (database), rhombus (decision points), rectangles (processes), oval (starting/ending points).
+</p>
+</div>
+<p>The average alignment for <em>uniquely mapped reads</em> is ~70% across all samples used in this study, while the number of reads assigned to specific genomic coordinates by <em>featureCounts</em> abundance estimation tool is on average ~60%. These fall within normal acceptable ranges.
+There were no excessive adaptor content or duplicated reads observed.</p>
+</div>
+<div id="exploring-potential-microbial-contamination-using-rna-seq-data" class="section level2">
+<h2><span class="header-section-number">4.2</span> Exploring Potential Microbial Contamination using RNA-Seq Data</h2>
+<p>To explore the potential microbial contaminants amongst the sample data sets, a representative subset of samples were chosen, see Table <a href="results-and-discussion.html#tab:subsetDes">4.1</a>, such that every category i.e., adult heart, fetal heart, CM, EHM is represented by one sample in the subset, chosen across different sequencing runs, different years and different projects.
+Human and non-human reads were separated and the latter were used as possible microbial read candidates.
+After a series of filtering, as explained in Section <a href="methods.html#estBacVir">3.4</a>, the non-host, high-quality and unique reads were aligned against the reference genomes of bacteria and virus.</p>
+<table class="table table-striped table-hover table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:subsetDes">Table 4.1: </span>Samples chosen for in-depth analysis
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Sample
+</th>
+<th style="text-align:left;">
+Sample Number
+</th>
+<th style="text-align:left;">
+Project Accession
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 1em; ">
+SRR1663123_GSM1554465
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+PRJNA268504
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+SRR6706796_GSM2991857
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+PRJNA433831
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+Sample_r733sCDICM3
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+p556sCM10-3-4
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+p637sDiff6CM
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+p722s3C190604
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+p786sC190924A
+</td>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+</tr>
+</tbody>
+</table>
+<table class="table table-striped table-hover table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:subsetTab">Table 4.2: </span>Sample Read Statistics
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="2">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Human
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Microbial
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Sample Number
+</th>
+<th style="text-align:left;">
+Total Reads
+</th>
+<th style="text-align:left;">
+Primary
+</th>
+<th style="text-align:left;">
+Multi-mapped
+</th>
+<th style="text-align:left;">
+rRNA
+</th>
+<th style="text-align:left;">
+Viral
+</th>
+<th style="text-align:left;">
+Bacterial
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 1em; ">
+1
+</td>
+<td style="text-align:left;">
+35M
+</td>
+<td style="text-align:left;">
+13M
+</td>
+<td style="text-align:left;">
+16M
+</td>
+<td style="text-align:left;">
+6M
+</td>
+<td style="text-align:left;">
+20K
+</td>
+<td style="text-align:left;">
+1K
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+2
+</td>
+<td style="text-align:left;">
+20M
+</td>
+<td style="text-align:left;">
+17M
+</td>
+<td style="text-align:left;">
+1M
+</td>
+<td style="text-align:left;">
+2M
+</td>
+<td style="text-align:left;">
+24K
+</td>
+<td style="text-align:left;">
+2K
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+3
+</td>
+<td style="text-align:left;">
+51M
+</td>
+<td style="text-align:left;">
+27M
+</td>
+<td style="text-align:left;">
+20M
+</td>
+<td style="text-align:left;">
+4M
+</td>
+<td style="text-align:left;">
+190
+</td>
+<td style="text-align:left;">
+949
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+4
+</td>
+<td style="text-align:left;">
+53M
+</td>
+<td style="text-align:left;">
+42M
+</td>
+<td style="text-align:left;">
+10M
+</td>
+<td style="text-align:left;">
+1M
+</td>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+5K
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+5
+</td>
+<td style="text-align:left;">
+52M
+</td>
+<td style="text-align:left;">
+31M
+</td>
+<td style="text-align:left;">
+17M
+</td>
+<td style="text-align:left;">
+3M
+</td>
+<td style="text-align:left;">
+320
+</td>
+<td style="text-align:left;">
+3K
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+6
+</td>
+<td style="text-align:left;">
+51M
+</td>
+<td style="text-align:left;">
+49M
+</td>
+<td style="text-align:left;">
+60K
+</td>
+<td style="text-align:left;">
+2M
+</td>
+<td style="text-align:left;">
+966
+</td>
+<td style="text-align:left;">
+14K
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 1em; ">
+7
+</td>
+<td style="text-align:left;">
+79M
+</td>
+<td style="text-align:left;">
+36M
+</td>
+<td style="text-align:left;">
+35M
+</td>
+<td style="text-align:left;">
+8M
+</td>
+<td style="text-align:left;">
+9K
+</td>
+<td style="text-align:left;">
+3K
+</td>
+</tr>
+</tbody>
+</table>
+<p>The general mapping statistics of the chosen samples can be seen in Figure <a href="results-and-discussion.html#fig:mapStat">4.2</a>A and tabulated in Table <a href="results-and-discussion.html#tab:subsetTab">4.2</a>. Samples vary in terms of their sequencing depth (akin to the total reads column) and the proportion mapped to the human genome, which varies between 40% to 91% across samples.<br />
+A large variance is found in the number of viral/bacterial reads mapped per million human mapped reads, see Figure <a href="results-and-discussion.html#fig:mapStat">4.2</a>B.</p>
+<div class="figure"><span id="fig:mapStat"></span>
+<img src="data/overviewCon.png" alt="General Mapping Statistics. A shows samples and percentage of reads mapped to different groups. Y-aixs is in log scale to resolve low-expression reads. B shows shows separate bacterial and viral reads mapped per million human mapped reads per sample." width="100%" />
+<p class="caption">
+Figure 4.2: General Mapping Statistics. A shows samples and percentage of reads mapped to different groups. Y-aixs is in log scale to resolve low-expression reads. B shows shows separate bacterial and viral reads mapped per million human mapped reads per sample.
+</p>
+</div>
+<p>Absolute numbers of reads confidently assigned to different viral species across different samples is shown in Figure <a href="results-and-discussion.html#fig:contaViral">4.3</a>A.
+The same data is shown as relative abundance in Figure <a href="results-and-discussion.html#fig:contaViral">4.3</a>B.
+Samples 1 and 2 have a disproportionate number of reads, about 20,000 reads, mapped to a single viral genome — the col phage or phi-X174 (PhiX - NC_00 1422.1).
+Proteus phage is the second entity with high number of absolute reads assigned to it (~7000).</p>
+<div class="figure"><span id="fig:contaViral"></span>
+<img src="results/00viralSp.png" alt="Possible viral contaminants. A shows the absolute number of reads confidently assigned to different viral species across different samples, while B represents them as relative abundances." width="100%" />
+<p class="caption">
+Figure 4.3: Possible viral contaminants. A shows the absolute number of reads confidently assigned to different viral species across different samples, while B represents them as relative abundances.
+</p>
+</div>
+<p>PhiX contaminants in samples 1 and 2 are most probably delibrately added as spike-in in <a href="https://www.illumina.com/content/dam/illumina-marketing/documents/products/technotes/technote-hiseq-low-diversity.pdf">illumina</a> HISEQ platforms to increase nucleotide diversity.
+Samples 1 and 2 were sequenced on the HISEQ-2500<span class="citation"><sup><a href="#ref-yanEpigenomicLandscapeHuman2016">63</a></sup></span> and HISEQ-4000<span class="citation"><sup><a href="#ref-pavlovicComparativeAssessmentHuman2018">61</a></sup></span> platforms while all in-house samples were sequenced on HISEQ-2000<span class="citation"><sup><a href="#ref-tiburcyDefinedEngineeredHuman2017">30</a></sup></span> which has a separate, dedicated lane for the PhiX spike-in quality control to avoid PhiX reads to appear in the FASTQ files.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>
+Unusually high numbers of viral reads were seen in Sample 7, mostly that of Proteus phage VB_PmiS-Isfahan (NC_041925).
+Like other phage viruses, the Proteus phage also infects bacterial cells, specifically <em>Proteus mirabilis</em> a highly motile bacterium belonging to the <em>Enterobacteriaceae family</em>, which is the most common species responsible for catheter-associated urinary tract infections<span class="citation"><sup><a href="#ref-schafferProteusMirabilisUrinary2015">65</a></sup></span>.
+No reads were confidently assigned to the <em>Proteus</em> genera of bacteria, however, proteus phage is considered to be highly lytic and there are several other bacteria belonging to the <em>Proteus</em> genera which are ubiquitously present on and in human guts which could be infected by the phage<span class="citation"><sup><a href="#ref-drzewieckaSignificanceRolesProteus2016">66</a></sup></span>, hence making this assignment plausible.
+All other viruses detected were less 200 reads per sample except those that mapped to the  HERVs.
+These are viral sequences that represent ancient viral infections that affected the primates’ germ line and became stably integrated into the host genome.
+This was an interesting find as ~ 8% of the human genome is said to be of viral origin, the HERVs.
+The reason behind its baseline expression in most of the adult tissues nor its role in different pathologies are not well defined<span class="citation"><sup><a href="#ref-grandiHumanEndogenousRetroviruses2018">67</a>–<a href="#ref-nelsonDemystifiedHumanEndogenous2003">69</a></sup></span>.</p>
+<div class="figure"><span id="fig:contaBacGe"></span>
+<img src="results/00bacGenus1.png" alt="Possible bacterial contaminants at the Genus level. A shows the absolute number of reads confidently assigned to different bacterial genera across different samples, accounting for around 80 percent of all the reads assigned to bacteria, while B represents them as percentage proportions." width="100%" />
+<p class="caption">
+Figure 4.4: Possible bacterial contaminants at the Genus level. A shows the absolute number of reads confidently assigned to different bacterial genera across different samples, accounting for around 80 percent of all the reads assigned to bacteria, while B represents them as percentage proportions.
+</p>
+</div>
+<p>Unlike viral, the bacterial reads were analyzed at two levels, genus (Figure <a href="results-and-discussion.html#fig:contaBacGe">4.4</a>) and species (Figure <a href="results-and-discussion.html#fig:contaBacSp">4.5</a>).
+The 10 genera shown account for about ~80% of all reads mapped to bacteria while the 10 species shown account for about ~50% of all reads mapped.
+All samples except Sample 6, are within acceptable limits of bacterial reads/sample, less than 100 bacterial reads/million human mapped reads<span class="citation"><sup><a href="#ref-strongMicrobialContaminationNext2014">70</a></sup></span>.
+Sample 6 has ~13500 reads in absolute numbers and approximately 250 bacterial reads/million human mapped reads, most of which are accounted for by 4 genera — <em>Acinetobacter</em>, <em>Klebsiella</em>, <em>Neisseria</em>, <em>Pseudomonas</em>.
+This is also reflected at the species level, where <em>Klebsiella pneumoniae</em> and <em>Neisseria gonorrhoeae</em> account for 57% of the entire bacterial contamination found in the sample while the rest is accounted for by 189 other species.
+Low levels of both these bacteria are also found in the other in-house samples.
+The presence of <em>Cutibacterium acnes</em>, <em>Pseudomonas</em> and <em>Acinetobacter</em> bacterial contamination has been well documented owing to their epidermal persence in the first case and to water associated presence, even ultra-purified, in the last two cases<span class="citation"><sup><a href="#ref-kekiApplicationSpecialOligotrophic2013">71</a>–<a href="#ref-salterReagentLaboratoryContamination2014">73</a></sup></span>.
+While <em>Klebsiella</em> has been associated with pathologies, it is also a known opportunistic pathogen which is a normal part of the microbial flora of mucosal surfaces such as the mouth and throat and found ubiquitously in nature/environment<span class="citation"><sup><a href="#ref-bengoecheaKlebsiellaPneumoniaeInfection2019">74</a></sup></span>.
+Likewise, although <em>Neisseria gonorrhoeae</em> is not a part of the normal flora, it could also present as benign/unnoticed infections of the mucosal surfaces urogenital tract, pharynx, and rectum, apart from causing a full-blown pathological disease<span class="citation"><sup><a href="#ref-escobarMacrophageNeisseriaGonorrhoeae2018">75</a></sup></span>.
+The discovery of bacterial reads in cell line data and the finding of different bacterial taxa in data from different sequencing runs/groups/labs supports the idea that a good portion of bacterial reads are possibly not derived from the specimens themselves.</p>
+<div class="figure"><span id="fig:contaBacSp"></span>
+<img src="results/00bacSpecies1.png" alt="Possible bacterial contaminants at the species level. A shows the absolute number of reads confidently assigned to different bacterial species across different samples, accounting for around 50 percent of all the reads assigned to bacteria, while B represents them as percentage proportions." width="100%" />
+<p class="caption">
+Figure 4.5: Possible bacterial contaminants at the species level. A shows the absolute number of reads confidently assigned to different bacterial species across different samples, accounting for around 50 percent of all the reads assigned to bacteria, while B represents them as percentage proportions.
+</p>
+</div>
+<p>The results from these 7 representative samples are in-line with papers published which looked at the microbial contamination in RNA-Seq samples in terms of their diversity and the range of proportions of microbial contamination differing between different samples.
+For instance, work by Strong et al<span class="citation"><sup><a href="#ref-strongMicrobialContaminationNext2014">70</a></sup></span>, showed that <em>Acinetobacter</em> contributed to the highest number of reads.
+While the study by Park et al<span class="citation"><sup><a href="#ref-parkSystematicSequencingbasedApproach2019">76</a></sup></span>, also picked up a large number of samples having PhiX phage reads in them.
+All the samples assessed here have microbial reads less than 0.1% of total reads (including the first two samples if we account for the spike-in PhiX reads).
+This is considered very low and acceptible by other papers which have published on this topic<span class="citation"><sup><a href="#ref-strongMicrobialContaminationNext2014">70</a></sup></span>, however, no rule/regulation stipulated by cGMP exists currently which deal with such non-standard exploration of microbial contamination in TEPs.<br />
+The samples also differed in their sequencing depths which would have influenced the extent to which metagenomic reads were picked up.
+This work is neither exhaustive nor confirmatory but since it has the possibility of working on already collected data, it could be a novel complementary and regulatory step that might one day be incorporated into a cGMP practice alongside other standard microbial detection techniques.</p>
+</div>
+<div id="global-view-of-the-transcriptomic-data" class="section level2">
+<h2><span class="header-section-number">4.3</span> Global view of the transcriptomic data</h2>
+<p>Data from 68 samples were collected (20 iPSC-CMs, 17 EHM, 16 Fetal Heart samples, 15 Adult Heart Samples) across different studies as shown in Table <a href="methods.html#tab:dataSource">3.1</a>.
+To examine global trends in gene expression levels, the normalized data across all samples were visualized using PCA (Figure <a href="results-and-discussion.html#fig:pcaCheck">4.7</a>).
+72.4% of total variation in the dataset can be explained by the first 4 PCs and the cumulative percentage of the variances explained by the first eight PCs is shown as a scree plot (Figure <a href="results-and-discussion.html#fig:pcaCheck2">4.6</a>A).
+The major source of variation in the data is correlated with the sample type
+and is captured by the first PC accounting for 42.9% of the variation in the data set, where the first PC effectively separates the sub-groups with an almost uni-directional progression from cardiomyocytes to EHMs to fetal heart tissue and adult heart subtypes, showing that this vector captures the increase in complexity of the tissue types (Figure <a href="results-and-discussion.html#fig:pcaCheck2">4.6</a>B).</p>
+<div class="figure"><span id="fig:pcaCheck2"></span>
+<img src="data/modPCAtop.png" alt="A shows the cummulative variance explained by the PCs. B and C show the different groups plotted against PC1 and PC2 respectively." width="100%" />
+<p class="caption">
+Figure 4.6: A shows the cummulative variance explained by the PCs. B and C show the different groups plotted against PC1 and PC2 respectively.
+</p>
+</div>
+<p>The second largest source of variation is captured by PC2 accounting for 14.3% of the total variance and separates the fetal heart samples from the rest of the sample types as shown by the ordering of sample types according to PC2, (see Figure <a href="results-and-discussion.html#fig:pcaCheck2">4.6</a>C).</p>
+<div class="figure"><span id="fig:pcaCheck"></span>
+<img src="results/twoPCA.png" alt="A and B show the PCA plots of all the samples againt PC1 and PC2/PC4. The samples are coloured based on their groups." width="100%" />
+<p class="caption">
+Figure 4.7: A and B show the PCA plots of all the samples againt PC1 and PC2/PC4. The samples are coloured based on their groups.
+</p>
+</div>
+<p>Cardiomyocyte samples which are &gt;90% actinin+ in FACS are in-essence representative of a single cell type, while EHMs have the additional stromal cells.
+Apart from these two, fetal heart tissues also contain a variety of other cell types and sub-types including differentiated and differentiating cells along different lineages.
+The adult heart on the other hand is composed of not just cardiomyocytes and fibroblasts but also endothelial cells, immune cells, vascular smooth muscle cells and cells making up the conduction system.
+Fetal heart samples show relatively loose clustering compared to adult heart samples.
+This might be because the fetal samples were collected across different gestational periods, in the range of 9 weeks - 16 weeks (Figure <a href="results-and-discussion.html#fig:pcaCheck">4.7</a>A).</p>
+<p>The EHM samples also show two semi-distinct clusters, corresponding to the two EHM sources — in-house and from the PRJNA362579 project.
+The source of this variation within the EHM samples appears to be strongly associated with PC4, see Figures <a href="results-and-discussion.html#fig:ehmFacet">4.8</a> and <a href="results-and-discussion.html#fig:pcaCheck">4.7</a>B.</p>
+<div class="figure"><span id="fig:ehmFacet"></span>
+<img src="data/facetWrapEHMs.png" alt="Separation of EHMs by the first 4 PCs. The two groups of EHMs and the varying degress of separation by different PCs, visualized by a density plot." width="100%" />
+<p class="caption">
+Figure 4.8: Separation of EHMs by the first 4 PCs. The two groups of EHMs and the varying degress of separation by different PCs, visualized by a density plot.
+</p>
+</div>
+<p>As explained in Section <a href="index.html#pca">1.5.1</a>, the loading scores of genes can be explored further to look for possible meaningful explanations of the basis of separations of the clusters.
+The top 50 genes with the highest absolute loading values is tabulated for the first 4 PCs in Table <a href="results-and-discussion.html#tab:pcaAndGenes">4.3</a>.</p>
+<table class="table table-striped table-hover table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:pcaAndGenes">Table 4.3: </span>Top 50 Genes with the highest absolute loading in the first 4 PCs
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Gene
+</th>
+<th style="text-align:right;">
+PC
+</th>
+<th style="text-align:left;">
+Gene
+</th>
+<th style="text-align:right;">
+PC
+</th>
+<th style="text-align:left;">
+Gene
+</th>
+<th style="text-align:right;">
+PC
+</th>
+<th style="text-align:left;">
+Gene
+</th>
+<th style="text-align:right;">
+PC
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+GPR4
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+ARHGAP33
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+PLAT
+</td>
+<td style="text-align:right;">
+-0.064
+</td>
+<td style="text-align:left;">
+ANGPT2
+</td>
+<td style="text-align:right;">
+-0.071
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PDE2A
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+PRRT2
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+MMP14
+</td>
+<td style="text-align:right;">
+-0.064
+</td>
+<td style="text-align:left;">
+CLMP
+</td>
+<td style="text-align:right;">
+-0.068
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CD300LG
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+MXD3
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+ITIH3
+</td>
+<td style="text-align:right;">
+-0.061
+</td>
+<td style="text-align:left;">
+MEG8
+</td>
+<td style="text-align:right;">
+-0.067
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GIMAP1
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+PIF1
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+TNC
+</td>
+<td style="text-align:right;">
+-0.060
+</td>
+<td style="text-align:left;">
+F2RL2
+</td>
+<td style="text-align:right;">
+-0.066
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RAMP3
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+KIF18B
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+TGFBI
+</td>
+<td style="text-align:right;">
+-0.059
+</td>
+<td style="text-align:left;">
+DOCK10
+</td>
+<td style="text-align:right;">
+-0.065
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+APOD
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+CHTF18
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+LIF
+</td>
+<td style="text-align:right;">
+-0.059
+</td>
+<td style="text-align:left;">
+SAMD9L
+</td>
+<td style="text-align:right;">
+-0.062
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SPAAR
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+TROAP
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+ENC1
+</td>
+<td style="text-align:right;">
+-0.059
+</td>
+<td style="text-align:left;">
+PI15
+</td>
+<td style="text-align:right;">
+-0.062
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RAI2
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+HBG1
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+LUM
+</td>
+<td style="text-align:right;">
+-0.058
+</td>
+<td style="text-align:left;">
+CTSK
+</td>
+<td style="text-align:right;">
+-0.060
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TMEM273
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+SPTA1
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+TIMP1
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+<td style="text-align:left;">
+PAMR1
+</td>
+<td style="text-align:right;">
+-0.060
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+APOL3
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+HBG2
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+EFEMP1
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+<td style="text-align:left;">
+CCDC144B
+</td>
+<td style="text-align:right;">
+-0.059
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+COL4A5
+</td>
+<td style="text-align:right;">
+0.033
+</td>
+<td style="text-align:left;">
+FAM95C
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+FN1
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+<td style="text-align:left;">
+CLCA2
+</td>
+<td style="text-align:right;">
+-0.059
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SLC15A3
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+EPB42
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+SRPX2
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+<td style="text-align:left;">
+SAMD9
+</td>
+<td style="text-align:right;">
+-0.058
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SLC9A3R2
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+HEMGN
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+CFH
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+CRB2
+</td>
+<td style="text-align:right;">
+0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PRELP
+</td>
+<td style="text-align:right;">
+-0.033
+</td>
+<td style="text-align:left;">
+TMEM155
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+RHOU
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+TMEM119
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FABP4
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+PKMYT1
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+<td style="text-align:left;">
+CCL2
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+FAP
+</td>
+<td style="text-align:right;">
+-0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GPX3
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+YJEFN3
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+<td style="text-align:left;">
+IL1R1
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+CITED4
+</td>
+<td style="text-align:right;">
+0.057
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RORC
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+LENG8
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+<td style="text-align:left;">
+VGLL3
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+PCDH18
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C1QA
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+FOXM1
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+<td style="text-align:left;">
+SERPINE2
+</td>
+<td style="text-align:right;">
+-0.056
+</td>
+<td style="text-align:left;">
+RPL10P6
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DIRAS1
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+ESPL1
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+<td style="text-align:left;">
+BNC2
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+PUS7L
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TYROBP
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+GRIA2
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+NTM
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+LAMA5
+</td>
+<td style="text-align:right;">
+0.055
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HSPB6
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+EMC10
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+EMILIN1
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+POSTN
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FGR
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+SLC4A1
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+SULF1
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+PRRX1
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SOX18
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+DDX39B
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+FXYD5
+</td>
+<td style="text-align:right;">
+-0.055
+</td>
+<td style="text-align:left;">
+NT5E
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CD79B
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+PLK1
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+ZNF280D
+</td>
+<td style="text-align:right;">
+0.054
+</td>
+<td style="text-align:left;">
+KCNJ2
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CRYM
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+ALAS2
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+GPRC5A
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+TWIST2
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+RPL3L
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+CDT1
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+CYP1B1
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+ADGRG7
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+FCN3
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+MYBL2
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+COL1A2
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+ZNF528
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TMEM143
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+MIR503HG
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+RCN3
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+TMSB4XP8
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PTGDR2
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+CDCA3
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+DKK1
+</td>
+<td style="text-align:right;">
+-0.054
+</td>
+<td style="text-align:left;">
+LPAR1
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+HLF
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+AGAP6
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+F2RL1
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+LINC01405
+</td>
+<td style="text-align:right;">
+0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NDRG4
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+TMCC2
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+<td style="text-align:left;">
+IGFBP3
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+GABRA4
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADGRE5
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+PLEKHG4B
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+NLRP2
+</td>
+<td style="text-align:right;">
+-0.053
+</td>
+<td style="text-align:left;">
+THBS2
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ACKR1
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+HBM
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+LOX
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+PRRX2
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AQP7
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+SOD2
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:left;">
+ITGA11
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+DPP4
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+IGF2BP3
+</td>
+<td style="text-align:right;">
+0.032
+</td>
+<td style="text-align:left;">
+CDC42
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:left;">
+ZNF680
+</td>
+<td style="text-align:right;">
+0.052
+</td>
+<td style="text-align:left;">
+AC096664.2
+</td>
+<td style="text-align:right;">
+0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PLIN4
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+FKBP2
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+SPHKAP
+</td>
+<td style="text-align:right;">
+0.052
+</td>
+<td style="text-align:left;">
+CXCL10
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ICAM2
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+CHTF8
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+PTX3
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+ZNF248
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CD38
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+TTYH3
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+NNMT
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+AC016739.1
+</td>
+<td style="text-align:right;">
+0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+C1QB
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+IGSF9
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+HGF
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+MYH6
+</td>
+<td style="text-align:right;">
+0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CCM2L
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+FAUP1
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:left;">
+KRT17
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+ZNF736
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ADAM15
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+BHLHB9
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+CTHRC1
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+DDR2
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+P2RY8
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+NPIPB5
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+MMP9
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+MEG3
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TNFSF12
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+AP002884.1
+</td>
+<td style="text-align:right;">
+0.048
+</td>
+<td style="text-align:left;">
+PTGS2
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+FOXP4
+</td>
+<td style="text-align:right;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CBX7
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+AHSP
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+ITGA8
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+CLEC2B
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+LGALS9
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+GTSE1
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+COL3A1
+</td>
+<td style="text-align:right;">
+-0.052
+</td>
+<td style="text-align:left;">
+MMP3
+</td>
+<td style="text-align:right;">
+-0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DMTN
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+TYMS
+</td>
+<td style="text-align:right;">
+-0.048
+</td>
+<td style="text-align:left;">
+CDKN2B
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+AL161787.1
+</td>
+<td style="text-align:right;">
+0.050
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CLEC3B
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+PRRG3
+</td>
+<td style="text-align:right;">
+-0.047
+</td>
+<td style="text-align:left;">
+SERPINB2
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+CMKLR1
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SPI1
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+COL6A6
+</td>
+<td style="text-align:right;">
+-0.047
+</td>
+<td style="text-align:left;">
+FBN1
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+TMEM176B
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+GIMAP7
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+KIFC1
+</td>
+<td style="text-align:right;">
+-0.047
+</td>
+<td style="text-align:left;">
+BASP1
+</td>
+<td style="text-align:right;">
+-0.051
+</td>
+<td style="text-align:left;">
+CCN4
+</td>
+<td style="text-align:right;">
+-0.049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ECHDC3
+</td>
+<td style="text-align:right;">
+-0.032
+</td>
+<td style="text-align:left;">
+E2F1
+</td>
+<td style="text-align:right;">
+-0.047
+</td>
+<td style="text-align:left;">
+VWC2
+</td>
+<td style="text-align:right;">
+0.051
+</td>
+<td style="text-align:left;">
+CNTFR
+</td>
+<td style="text-align:right;">
+0.049
+</td>
+</tr>
+</tbody>
+</table>
+<p>Genes in the first PC account for the majority of separation of adult heart samples from the rest.
+The genes discriminatory for the adult heart samples not only account for the mature adult cardiomycoytes but also for the other cell types primarily found in adult hearts biopsies like AQP7, possibly from the adipose tissue surrounding the heart<span class="citation"><sup><a href="#ref-madeiraBiophysicalAssessmentHuman2013">77</a></sup></span> and APOD from aortic valves of the adult heart<span class="citation"><sup><a href="#ref-nordquistPostnatalAdultAortic2018">78</a></sup></span>.
+These cell types would be atypical for bioengineered tissues and cultured cell and less common in the fetal heart samples.
+The current analysis pipeline, does not allow to quantify the relative closeness of the EHM groups to either fetal or adult phenotypes.
+Other biological and functional characterizations of the EHMs are necessary to complement the deconvolution approach.</p>
+<div id="correlation-amongst-groups" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Correlation amongst groups</h3>
+<p>Pearson correlation of cardiomyocytes, EHMs and fetal heart samples’ gene expression to that of adult heart based on the top 2000 genes with the highest absolute loadings in PC1 and PC2 was performed, to check for global similarity in expression patterns and is shown in Figure <a href="results-and-discussion.html#fig:heatMap">4.9</a> A.2.
+These complement the observations from PCA and show that fetal heart samples have the highest similarity to adult heart samples (median ~0.6, with a notable range of 0.3 - 0.65), followed by EHMs (median ~0.45) and lastly by cardiomyocytes (median ~0.25).
+By choosing ~380 genes which are specifically detectable and enriched in the human heart, based on <a href="www.proteinatlas.org">Human Protein Atlas</a> data, the pearson correlation of the EHM and fetal samples becomes very comparable as shown in Figure <a href="results-and-discussion.html#fig:heatMap">4.9</a> B.2.
+The median correlation of the EHM samples is even slightly higher than that of the fetal samples, which is in line with our estimation of the EHMs being comparable to (~13wk) fetal tissue<span class="citation"><sup><a href="#ref-tiburcymalteDefinedEngineeredHuman2017">79</a></sup></span>.
+Gene expression across different sample types as per the curated gene list appears to be more consistent and comparable, as visualized in Figure <a href="results-and-discussion.html#fig:heatMap">4.9</a> B.1 in comparison to Figure <a href="results-and-discussion.html#fig:heatMap">4.9</a> A.1. The genes in the heatmaps are hierarchically clustered.</p>
+<p>These results show that the separation in PC1 of all the different groups are possibly not due to differences in the expression of genes pertaining to CMs, as they all have a higher correlation when a subset of heart-specific genes was used.
+And this high correlation was lost when the top 2000 genes with the highest loading in PC1 was used, indicating that the highest variance amongst the groups is possibly not due to biological differences in their CMs expression profile.</p>
+<div class="figure"><span id="fig:heatMap"></span>
+<img src="results/multiCorr.png" alt="Correlation of samples. Heatmaps show VST normalized and group-wise clubbed data. A.1 shows the top 2000 genes with highest loading in PC1 and PC2. B.1 shows a heatmap drawn from a selection of  ~380 genes based on Human Protein Atlas. In both the heatmaps each row represents a gene and each column represents the average of the sample group. A.2 and B.2 show the pearson correlation of the different groups to the adult heart samples based on either the top 2000 genes or the curated 380 genes." width="100%" />
+<p class="caption">
+Figure 4.9: Correlation of samples. Heatmaps show VST normalized and group-wise clubbed data. A.1 shows the top 2000 genes with highest loading in PC1 and PC2. B.1 shows a heatmap drawn from a selection of ~380 genes based on Human Protein Atlas. In both the heatmaps each row represents a gene and each column represents the average of the sample group. A.2 and B.2 show the pearson correlation of the different groups to the adult heart samples based on either the top 2000 genes or the curated 380 genes.
+</p>
+</div>
+</div>
+<div id="gene-level-analysis" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Gene-level analysis</h3>
+<p>Despite crucial insights derived from the global view of samples, a view based on curated set of genes are also indispensible and remain one of the most common ways of comparing samples/groups using transcriptomic data.
+Here we selected four different groups of genes, covering an example of metabolic, structural and general gene lists as shown in Figure <a href="results-and-discussion.html#fig:geneExp">4.10</a>.
+Panel A is a selected representation of the 10 highest and most specifically expressed genes based on information from human protein atlas.
+Unsurprisingly the adult heart samples show the highest expression for these genes, except the <em>Myom1</em> gene which has been recently found to be a putative marker for hPSC-induced cardiomyocytes’ maturity<span class="citation"><sup><a href="#ref-caiwenxuanUnbiasedProteomicsMethod2019">80</a></sup></span>, which is almost equally expressed in all samples.
+Panel B consists of 22 genes associated with the <em>sarcomere</em> gene ontology term.
+Genes such as <em>Myo3b</em>, <em>Capn3</em> have a lower expression in the adult heart samples as opposed to the others and are known to have distinct patterns of high expressions during the developmental timeline<span class="citation"><sup><a href="#ref-fougerousseCalpain3ExpressionHuman2000">81</a>,<a href="#ref-liuqingGenomeWideTemporalProfiling2017">82</a></sup></span>.
+Panel C is representative of the genes belonging to the oxidation-reduction pathway, while D is a gene list derived from the group’s prior publication which deduced that these 50 genes are differentially expressed and considered to be markers for cardiomyocytes.
+Notably, adult heart associated genes are generally highly expressed, followed by fetal and EHM samples.
+A few clear exceptions are genes such as <em>Gpc3</em> which has a clear and marked role in vertebrate development<span class="citation"><sup><a href="#ref-ngLossGlypican3Function2009">83</a></sup></span>, <em>Myl4</em> and <em>Myl7</em> are known to be expressed heavily by the developing heart<span class="citation"><sup><a href="#ref-pawlakDynamicsCardiomyocyteTranscriptome2019">84</a>–<a href="#ref-wangHumanCardiacMyosin2019">86</a></sup></span>, and <em>Tnni3</em> which is known to be expressed under specific developmental conditions<span class="citation"><sup><a href="#ref-shengTNNI1TNNI2TNNI32016">87</a></sup></span>.
+This gives a snapshot of the approximate level of general (panel A and D), structural (panel B) and metabolic (panel C) maturation/status of the EHMs and cardiomyocytes at a transcript level in comparison to the fetal and adult heart samples.
+These observations are in line with previous results showing that cardiomyocytes in 2D are less mature than EHMs and at a population/tissue level the EHMs are similar to fetal heart samples.</p>
+<div class="figure"><span id="fig:geneExp"></span>
+<img src="results/GeneExp-thesis01.png" alt="At individual gene level, the EHMs resemble the fetal heart expression levels. The graph shows normalized counts of different panels of gene sets. The bigger circles show the median of each group while the slightly transparent and smaller circles represent each sample for every gene. A shows the 10 highest and most specifically expressed genes as per human protein atlas. B contains 22 genes belonging to the sarcomere gene ontology term. C is representative of the genes belonging to the oxidation-reduction pathway and D is a gene list derived from the group's prior publication which deduced that these 50 genes are differentially expressed and considered to be markers for cardiomyocytes" width="100%" />
+<p class="caption">
+Figure 4.10: At individual gene level, the EHMs resemble the fetal heart expression levels. The graph shows normalized counts of different panels of gene sets. The bigger circles show the median of each group while the slightly transparent and smaller circles represent each sample for every gene. A shows the 10 highest and most specifically expressed genes as per human protein atlas. B contains 22 genes belonging to the sarcomere gene ontology term. C is representative of the genes belonging to the oxidation-reduction pathway and D is a gene list derived from the group’s prior publication which deduced that these 50 genes are differentially expressed and considered to be markers for cardiomyocytes
+</p>
+</div>
+<p>Exploring the data in the global context and at the gene-level did fortify pre-formed opinions but was of little help in the elucidation of the possible sub-populations within each sample. This was subsequently addressed by the deconvolution technique, as described below.</p>
+</div>
+</div>
+<div id="deconvolution-of-bulk-cms-and-ehms-rna-seq-data" class="section level2">
+<h2><span class="header-section-number">4.4</span> Deconvolution of Bulk CMs and EHMs RNA-Seq Data</h2>
+<p>Adult and fetal primary heart samples are natively heterogeneous with respect to cell composition, while bioengineered tissues consist of two main components and samples from targeted differentiations should contain one dominant cell type at beginning (iPSC) and end (CM) but go through stages with diverse transient cell populations in between.
+To rationalize and quantify the heterogeneity present within the in-house bulk samples, computational deconvolution was performed using a public single-cell reference sample<span class="citation"><sup><a href="#ref-friedmanSingleCellTranscriptomicAnalysis2018">58</a></sup></span>.
+Based on the reference data, the last two time points sequenced during the differentiation of iPSCs to CMs are represented as Day 15 and Day 30 with two distinct sub-populations within each group.
+Day 15 is characterized by a <em>non-contractile, fibroblast-like</em> sub-group (denoted as d15:S1) and a <em>contractile, cardiac-like/cCM</em> sub-group (denoted as d15:S2).
+Similarly day 30 is characterized by two sub-groups — <em>non-contractile cells</em> (d30:S1) and <em>cardiomyocytes/dCM</em> (d30:S2) ), as tabulated in B of <a href="results-and-discussion.html#fig:deconvRes">4.11</a>.
+Methodologically we followed a state of the art protocol, as described in Section <a href="methods.html#singleCell">3.2</a>, where d15 and d30 reference data were processed and used in CIBERSORTx to generate a signature-matrix, which was then used to deconvolve the bulk samples, whose results are shown as a percentage proportion bar graph in Figure <a href="results-and-discussion.html#fig:deconvRes">4.11</a>A.</p>
+<p>CMs samples are considered highly (&gt;90% cardiomyocytes) pure while EHM samples were prepared from 70% cardiomyocytes and 30% stromal cells (~30%).
+To scale the CM samples for the 30% FBs in the EHM sample, a “virtual” cell type or comparability factor was added.
+The CM sample shows a larger proportion of d15:S1 phenotype-like cells (~57%) and a smaller proportion of d30:S1 (mature cardiomyocyte-like) cells as compared to EHMs, supporting the notion that CMs continue maturation when being exposed to the 3D EHM environment<span class="citation"><sup><a href="#ref-machirajuCurrentMethodsMaturation2019">88</a></sup></span>.
+The increase in duration of culture has been proposed to increase the maturity of the CMs, as also clearly evidenced by the deconvolution.
+It is also interesting to note that the deconvolution picked up the sparsity of non-cardiomyocyte-like cells in the CMs sample, only about ~9% of the sample is represented by the S2 sub-groups across both time-points, showing that the majority is composed by cardiomyocytes or cardiomyocytes-like cells.
+This clearly validates the current differentiation protocol.
+The difference in composition of the EHM samples from that of CMs is also captured efficiently as seen by the increase in proportion of S2 sub-groups (the <em>non-contractile cells</em> ) in the EHM samples.</p>
+<div class="figure"><span id="fig:deconvRes"></span>
+<img src="results/04_Deconv.png" alt="EHMs have a higher proportion of mature cardiomyocytes in comparison to CMs. A shows percentages of the various groups as per deconvolution, that are explained in B, along with a comparability factor added to the CM samples to allow for direct comparison of both CMs and EHMs." width="100%" />
+<p class="caption">
+Figure 4.11: EHMs have a higher proportion of mature cardiomyocytes in comparison to CMs. A shows percentages of the various groups as per deconvolution, that are explained in B, along with a comparability factor added to the CM samples to allow for direct comparison of both CMs and EHMs.
+</p>
+</div>
+<p>As explained in Section <a href="index.html#rationale">1.6</a>, our group envisions to conduct clinical trials employing the usage of EHMs for treatment of heart failure.
+Given that CMs are a key component in the production of EHMs, it is vital that the batch-to-batch consistency is maintained.
+Currently four batches of CMs have been analyzed in Figure <a href="results-and-discussion.html#fig:deconvCM">4.12</a> post bulk-sequencing and subsequent deconvolution.
+The variation across samples within proportions sub-groups is not signficant (Figure <a href="results-and-discussion.html#fig:deconvCM">4.12</a>A).
+Each sample and its corresponding deconvoluted putative sub-group percentages are shown in Figure <a href="results-and-discussion.html#fig:deconvCM">4.12</a>B.
+It is evident that the majority of any CM sample is accounted for by the d15:S2 (immature cardiomyocyte) phenotype (~ 83%) which is in-line with the evidences from functional and structural experiments of the group.
+Across every differentiation run, the efficiency of differentiation is assessed using flow cytometric markers, and percentage of cells positive for Actinin 2 marker indicate the approximate amount of cells differentiated into cardiomyocytes.
+In particular, one among the four samples was observed to have low percentages of Actinin positive cells (~40%), which was suspected to be an error in handling of the flow cytometer than actual lack of purity.
+The results from deconvolution show that indeed all the samples have a large proportion of cardiomyocytes (mean ~87%), and the single, potential outlier from flow cytometry data was possibly erroneous.</p>
+<div class="figure" style="text-align: center"><span id="fig:deconvCM"></span>
+<img src="results/01deconvCM.png" alt="The GMP-CM samples are mostly consistent wrt subpopulations derived from deconvolution. A shows the box plots of the contribution of four sub groups across the four samples. B is a sample-wise representation of the sub-groups." width="100%" />
+<p class="caption">
+Figure 4.12: The GMP-CM samples are mostly consistent wrt subpopulations derived from deconvolution. A shows the box plots of the contribution of four sub groups across the four samples. B is a sample-wise representation of the sub-groups.
+</p>
+</div>
+<p>To see whether the difference observed between the two EHM sub-groups (in-house and from the project PRJNA362579) in PCA could be addressed using the deconvolution technique, a sample-level deconvolution was performed, as shown in Figure <a href="results-and-discussion.html#fig:deconvEHM">4.13</a>.
+It is seen that the EHM samples from project PRJNA362579 have a higher average percentage of <em>mature-cardiomyocytes</em> (d30:S2 ~ 23%) and more specifically, a sub group of the EHMs within it which the authors consider were more mature (~25%) due to differences in media supplementation (those labelled with MM medium). Those “mature” samples also have a higher combined percentage of d15:S1 and d30:S2 (i.e., all the cells committed to the cardiac lineage).
+The in-house samples show higher variation amongst the proportions of different sub-groups.
+This apparent consistency seen in the EHM samples from PRJNA362579, could be attributed to the fact that all these samples are from one study, primed for one hypothesis, while the in-house EHMs were sequenced across different years and different productions runs, along with changes in protocols. Yet, across the same cell-line or production batch, for instance the EHMs made from HES2 cell line, the consistency in putative sub populations are maintained.</p>
+<div class="figure"><span id="fig:deconvEHM"></span>
+<img src="results/01deconvEHM.png" alt="Differences in subpopulations amongst EHM samples. A shows the box-plots of percentage contributions of the various groups as per the source of the sample --- in-house or from the PRJNA362579 project. B shows the corresponding sample-wise breakdown of the subpopulations in bulk data." width="100%" />
+<p class="caption">
+Figure 4.13: Differences in subpopulations amongst EHM samples. A shows the box-plots of percentage contributions of the various groups as per the source of the sample — in-house or from the PRJNA362579 project. B shows the corresponding sample-wise breakdown of the subpopulations in bulk data.
+</p>
+</div>
+<div id="limits-of-deconvolution" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Limits of deconvolution</h3>
+<p>To address the reliability of the deconvolution technique, all sample groups and all samples within all groups were included (iPSCs, fibroblasts, CMs, EHMs, adult and fetal heart) and were deconvolved using the same reference dataset, as shown in Figure <a href="results-and-discussion.html#fig:deconvAll">4.15</a>. Initially the validity of the deconvolution was evaluated by creating three different <em>pseudo bulk</em> samples, with known proportions of the sub-groups from the single cell data and these <em>bulk</em> samples were then deconvoluted, see Figure <a href="results-and-discussion.html#fig:pseudoBulk">4.14</a>. Here we see that the deconvolution recaptiulates the true proportions, with an average RMSE of 0.1.</p>
+<div class="figure"><span id="fig:pseudoBulk"></span>
+<img src="results/Deconv-pseudoBulk.png" alt="Estimating the validity of deconvolution. Three pseudobulk samples were created from the single cell reference data, the darker shade of the colours represent the known, true proportions of the four subgroups (denoted with a P). These samples were then deconvolved using CIBERSORTx and the resultant deconvolved estimated proportions are represented by the lighter shade bars adjacent to the true proportions." width="90%" />
+<p class="caption">
+Figure 4.14: Estimating the validity of deconvolution. Three pseudobulk samples were created from the single cell reference data, the darker shade of the colours represent the known, true proportions of the four subgroups (denoted with a P). These samples were then deconvolved using CIBERSORTx and the resultant deconvolved estimated proportions are represented by the lighter shade bars adjacent to the true proportions.
+</p>
+</div>
+<p>On the other hand, when we use samples irrelevant or different from the reference data set, we can see that all the groups were <em>deconvolved</em>, yet, the reliability of these results varied widely.
+For instance, the root mean squared error (RMSE)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> of iPSCs and Fibroblasts are close to 1.0 while that of fetal heart group is around 0.3 (Figure <a href="results-and-discussion.html#fig:deconvAll">4.15</a>B) . The correlation of the deconvolved results to the actual reference sample also had a large range, 0.19 for iPSC and 0.84 for the fetal heart.
+This shows the biggest limitation of such deconvolution techniques, and probably stands testimonial to the “garbage in, garbage out” situation, is the fact that deconvolution would work in any setting, however the usability of it depends on the relevance and similarity in composition of the cell types of the reference and the bulk data that needs to be deconvolved.</p>
+<div class="figure"><span id="fig:deconvAll"></span>
+<img src="results/groupdDecon2.png" alt="A shows the average deconvolution percentages of all groups to the four different subtypes. B shows the median RMSE of each group. Abbreviation: RMSE (root mean square error)." width="100%" />
+<p class="caption">
+Figure 4.15: A shows the average deconvolution percentages of all groups to the four different subtypes. B shows the median RMSE of each group. Abbreviation: RMSE (root mean square error).
+</p>
+</div>
+</div>
+</div>
+<div id="basic-characterisation-of-rhesus-cardiomyocytes" class="section level2">
+<h2><span class="header-section-number">4.5</span> Basic characterisation of Rhesus Cardiomyocytes</h2>
+<p>To see where the cardiomyocytes produced from rhesus-iPSCs were placed in comparison to the human-iPSCs cardiomyocytes, the RH-CM samples were sequenced and processed.
+These rhesus cardiomyocytes were produced to produce EHM patches which were then transferred to a heart failure model of non-primate rhesus models.
+After retaining only the 1:1 orthologous genes and accounting for variations in gene lengths, the resultant samples were visualized in a basic PCA plot (Figure <a href="results-and-discussion.html#fig:rhePCA">4.16</a>).
+All the samples are separated according to the cell type, starting with the first PC separating stromal cells and cardiomyocytes while the second PC separating iPSCs from the rest.
+Here, the human cardiomyocytes and rhesus cardiomyocytes (denoted as RH-CM) cluster together, and further analysis using DE showed that most of these differences were due to non-cardiac factors such as differences in signalling pathways and neuronal components possibly due to the fact that the rhesus cardiomyocytes were induced using the same protocol used for human cells which does not account for the differences in intricacies in the signalling pathways between the two.</p>
+<div class="figure" style="text-align: center"><span id="fig:rhePCA"></span>
+<img src="data/rhesusPCA.png" alt="PCA of different samples, iPSCs, fibroblasts, human CMs and rh-CMs show that the rhesus CMs cluster with the human CMs." width="100%" />
+<p class="caption">
+Figure 4.16: PCA of different samples, iPSCs, fibroblasts, human CMs and rh-CMs show that the rhesus CMs cluster with the human CMs.
+</p>
+</div>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-tiburcyDefinedEngineeredHuman2017">
+<p>30. Tiburcy, M. <em>et al.</em> Defined Engineered Human Myocardium with Advanced Maturation for Applications in Heart Failure Modelling and Repair. <em>Circulation</em> <strong>135</strong>, 1832–1847 (2017).</p>
+</div>
+<div id="ref-friedmanSingleCellTranscriptomicAnalysis2018">
+<p>58. Friedman, C. E. <em>et al.</em> Single-Cell Transcriptomic Analysis of Cardiac Differentiation from Human PSCs Reveals HOPX-Dependent Cardiomyocyte Maturation. <em>Cell Stem Cell</em> <strong>23</strong>, 586–598.e8 (2018).</p>
+</div>
+<div id="ref-pavlovicComparativeAssessmentHuman2018">
+<p>61. Pavlovic, B. J., Blake, L. E., Roux, J., Chavarria, C. &amp; Gilad, Y. A Comparative Assessment of Human and Chimpanzee iPSC-derived Cardiomyocytes with Primary Heart Tissues. <em>Scientific Reports</em> <strong>8</strong>, 15312 (2018).</p>
+</div>
+<div id="ref-yanEpigenomicLandscapeHuman2016">
+<p>63. Yan, L. <em>et al.</em> Epigenomic Landscape of Human Fetal Brain, Heart, and Liver. <em>The Journal of Biological Chemistry</em> <strong>291</strong>, 4386–4398 (2016).</p>
+</div>
+<div id="ref-schafferProteusMirabilisUrinary2015">
+<p>65. Schaffer, J. N. &amp; Pearson, M. M. Proteus mirabilis and Urinary Tract Infections. <em>Microbiology spectrum</em> <strong>3</strong>, (2015).</p>
+</div>
+<div id="ref-drzewieckaSignificanceRolesProteus2016">
+<p>66. Drzewiecka, D. Significance and Roles of Proteus spp. Bacteria in Natural Environments. <em>Microbial Ecology</em> <strong>72</strong>, 741–758 (2016).</p>
+</div>
+<div id="ref-grandiHumanEndogenousRetroviruses2018">
+<p>67. Grandi, N. &amp; Tramontano, E. Human Endogenous Retroviruses Are Ancient Acquired Elements Still Shaping Innate Immune Responses. <em>Frontiers in Immunology</em> <strong>9</strong>, (2018).</p>
+</div>
+<div id="ref-nelsonDemystifiedHumanEndogenous2003">
+<p>69. Nelson, P. N. <em>et al.</em> Demystified . . . Human endogenous retroviruses. <em>Molecular Pathology</em> <strong>56</strong>, 11–18 (2003).</p>
+</div>
+<div id="ref-strongMicrobialContaminationNext2014">
+<p>70. Strong, M. J. <em>et al.</em> Microbial Contamination in Next Generation Sequencing: Implications for Sequence-Based Analysis of Clinical Samples. <em>PLoS Pathogens</em> <strong>10</strong>, (2014).</p>
+</div>
+<div id="ref-kekiApplicationSpecialOligotrophic2013">
+<p>71. K’eki, Z., Gr’ebner, K., Bohus, V., M’arialigeti, K. &amp; T’oth, E. M. Application of special oligotrophic media for cultivation of bacterial communities originated from ultrapure water. <em>Acta Microbiologica Et Immunologica Hungarica</em> <strong>60</strong>, 345–357 (2013).</p>
+</div>
+<div id="ref-salterReagentLaboratoryContamination2014">
+<p>73. Salter, S. J. <em>et al.</em> Reagent and laboratory contamination can critically impact sequence-based microbiome analyses. <em>BMC Biology</em> <strong>12</strong>, 87 (2014).</p>
+</div>
+<div id="ref-bengoecheaKlebsiellaPneumoniaeInfection2019">
+<p>74. Bengoechea, J. A. &amp; Sa Pessoa, J. Klebsiella pneumoniae infection biology: Living to counteract host defences. <em>FEMS Microbiology Reviews</em> <strong>43</strong>, 123–144 (2019).</p>
+</div>
+<div id="ref-escobarMacrophageNeisseriaGonorrhoeae2018">
+<p>75. Escobar, A., Rodas, P. I. &amp; Acuña-Castillo, C. MacrophageNeisseria gonorrhoeae Interactions: A Better Understanding of Pathogen Mechanisms of Immunomodulation. <em>Frontiers in Immunology</em> <strong>9</strong>, (2018).</p>
+</div>
+<div id="ref-parkSystematicSequencingbasedApproach2019">
+<p>76. Park, S.-J. <em>et al.</em> A systematic sequencing-based approach for microbial contaminant detection and functional inference. <em>BMC Biology</em> <strong>17</strong>, 72 (2019).</p>
+</div>
+<div id="ref-madeiraBiophysicalAssessmentHuman2013">
+<p>77. Madeira, A., Camps, M., Zorzano, A., Moura, T. F. &amp; Soveral, G. Biophysical Assessment of Human Aquaporin-7 as a Water and Glycerol Channel in 3T3-L1 Adipocytes. <em>PLOS ONE</em> <strong>8</strong>, e83442 (2013).</p>
+</div>
+<div id="ref-nordquistPostnatalAdultAortic2018">
+<p>78. Nordquist, E., LaHaye, S., Nagel, C. &amp; Lincoln, J. Postnatal and Adult Aortic Heart Valves Have Distinctive Transcriptional Profiles Associated With Valve Tissue Growth and Maintenance Respectively. <em>Frontiers in Cardiovascular Medicine</em> <strong>5</strong>, (2018).</p>
+</div>
+<div id="ref-tiburcymalteDefinedEngineeredHuman2017">
+<p>79. Tiburcy Malte <em>et al.</em> Defined Engineered Human Myocardium With Advanced Maturation for Applications in Heart Failure Modeling and Repair. <em>Circulation</em> <strong>135</strong>, 1832–1847 (2017).</p>
+</div>
+<div id="ref-caiwenxuanUnbiasedProteomicsMethod2019">
+<p>80. Cai Wenxuan <em>et al.</em> An Unbiased Proteomics Method to Assess the Maturation of Human Pluripotent Stem CellDerived Cardiomyocytes. <em>Circulation Research</em> <strong>125</strong>, 936–953 (2019).</p>
+</div>
+<div id="ref-fougerousseCalpain3ExpressionHuman2000">
+<p>81. Fougerousse, F. <em>et al.</em> Calpain3 expression during human cardiogenesis. <em>Neuromuscular disorders: NMD</em> <strong>10</strong>, 251–256 (2000).</p>
+</div>
+<div id="ref-liuqingGenomeWideTemporalProfiling2017">
+<p>82. Liu Qing <em>et al.</em> Genome-Wide Temporal Profiling of Transcriptome and Open Chromatin of Early Cardiomyocyte Differentiation Derived From hiPSCs and hESCs. <em>Circulation Research</em> <strong>121</strong>, 376–391 (2017).</p>
+</div>
+<div id="ref-ngLossGlypican3Function2009">
+<p>83. Ng, A. <em>et al.</em> Loss of glypican-3 Function Causes Growth Factor-dependent Defects in Cardiac and Coronary Vascular Development. <em>Developmental biology</em> <strong>335</strong>, 208–215 (2009).</p>
+</div>
+<div id="ref-pawlakDynamicsCardiomyocyteTranscriptome2019">
+<p>84. Pawlak, M. <em>et al.</em> Dynamics of cardiomyocyte transcriptome and chromatin landscape demarcates key events of heart development. <em>Genome Research</em> <strong>29</strong>, 506–519 (2019).</p>
+</div>
+<div id="ref-wangHumanCardiacMyosin2019">
+<p>86. Wang, T. Y. <em>et al.</em> Human cardiac myosin light chain 4 (MYL4) mosaic expression patterns vary by sex. <em>Scientific Reports</em> <strong>9</strong>, 1–7 (2019).</p>
+</div>
+<div id="ref-shengTNNI1TNNI2TNNI32016">
+<p>87. Sheng, J.-J. &amp; Jin, J.-P. TNNI1, TNNI2 and TNNI3: Evolution, Regulation, and Protein Structure-Function Relationships. <em>Gene</em> <strong>576</strong>, 385–394 (2016).</p>
+</div>
+<div id="ref-machirajuCurrentMethodsMaturation2019">
+<p>88. Machiraju, P. &amp; Greenway, S. C. Current methods for the maturation of induced pluripotent stem cell-derived cardiomyocytes. <em>World Journal of Stem Cells</em> <strong>11</strong>, 33–43 (2019).</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="3">
+<li id="fn3"><p>Information obtained from Oregon State University’s Core facilities website <a href="https://cgrb.oregonstate.edu/core/illumina-hiseq-3000/phix-spike">Link</a>.<a href="results-and-discussion.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p>The RMSE is the square root of the variance of the residuals. It indicates the absolute fit of the model to the data — how close the observed data points are to the model’s predicted values. Lower values of RMSE indicate better fit.<a href="results-and-discussion.html#fnref4" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="methods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion-and-future-work.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

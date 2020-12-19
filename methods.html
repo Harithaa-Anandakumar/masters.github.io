@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Methods | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</title>
+  <meta name="description" content="3 Methods | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Methods | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Methods | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  
+  
+  
+
+<meta name="author" content="Harithaa Anandakumar" />
+
+
+<meta name="date" content="2020-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="aims-and-objectives.html"/>
+<link rel="next" href="results-and-discussion.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#need-for-better-therapeutics"><i class="fa fa-check"></i><b>1.1</b> Need for better therapeutics</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="index.html"><a href="index.html#immunological-responses-in-transplantations"><i class="fa fa-check"></i><b>1.1.1</b> Immunological Responses in Transplantations</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#engineered-human-myocardium"><i class="fa fa-check"></i><b>1.2</b> Engineered Human Myocardium</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="index.html"><a href="index.html#cgmp-and-quality-control-of-tissue-engineered-products"><i class="fa fa-check"></i><b>1.2.1</b> cGMP and Quality Control of Tissue Engineered Products</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#rnaseq"><i class="fa fa-check"></i><b>1.3</b> RNA Sequencing</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#bulkrna"><i class="fa fa-check"></i><b>1.3.1</b> Single cell versus bulk RNA Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#compdeconv"><i class="fa fa-check"></i><b>1.4</b> Computational deconvolution</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#exploratory-data-analysis-in-rna-sequencing"><i class="fa fa-check"></i><b>1.5</b> Exploratory Data Analysis in RNA-Sequencing</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#pca"><i class="fa fa-check"></i><b>1.5.1</b> Principal Component Analysis (PCA)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#rationale"><i class="fa fa-check"></i><b>1.6</b> Rationale for the current work</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="aims-and-objectives.html"><a href="aims-and-objectives.html"><i class="fa fa-check"></i><b>2</b> Aims and Objectives</a></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="methods.html"><a href="methods.html#general-analysis-pipeline-of-bulk-rna-seq-data"><i class="fa fa-check"></i><b>3.1</b> General Analysis Pipeline of Bulk RNA-Seq Data</a></li>
+<li class="chapter" data-level="3.2" data-path="methods.html"><a href="methods.html#singleCell"><i class="fa fa-check"></i><b>3.2</b> Single Cell Reference Data and CIBERSORTX</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="methods.html"><a href="methods.html#processing-of-single-cell-data"><i class="fa fa-check"></i><b>3.2.1</b> Processing of Single Cell Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="methods.html"><a href="methods.html#analysis-of-rhesus-rna-seq"><i class="fa fa-check"></i><b>3.3</b> Analysis of Rhesus RNA-Seq</a></li>
+<li class="chapter" data-level="3.4" data-path="methods.html"><a href="methods.html#estBacVir"><i class="fa fa-check"></i><b>3.4</b> Estimating Bacterial and Viral Contaminants</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results-and-discussion.html"><a href="results-and-discussion.html"><i class="fa fa-check"></i><b>4</b> Results and Discussion</a><ul>
+<li class="chapter" data-level="4.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#general-workflow-and-mapping-statistics"><i class="fa fa-check"></i><b>4.1</b> General Workflow and Mapping Statistics</a></li>
+<li class="chapter" data-level="4.2" data-path="results-and-discussion.html"><a href="results-and-discussion.html#exploring-potential-microbial-contamination-using-rna-seq-data"><i class="fa fa-check"></i><b>4.2</b> Exploring Potential Microbial Contamination using RNA-Seq Data</a></li>
+<li class="chapter" data-level="4.3" data-path="results-and-discussion.html"><a href="results-and-discussion.html#global-view-of-the-transcriptomic-data"><i class="fa fa-check"></i><b>4.3</b> Global view of the transcriptomic data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#correlation-amongst-groups"><i class="fa fa-check"></i><b>4.3.1</b> Correlation amongst groups</a></li>
+<li class="chapter" data-level="4.3.2" data-path="results-and-discussion.html"><a href="results-and-discussion.html#gene-level-analysis"><i class="fa fa-check"></i><b>4.3.2</b> Gene-level analysis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="results-and-discussion.html"><a href="results-and-discussion.html#deconvolution-of-bulk-cms-and-ehms-rna-seq-data"><i class="fa fa-check"></i><b>4.4</b> Deconvolution of Bulk CMs and EHMs RNA-Seq Data</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#limits-of-deconvolution"><i class="fa fa-check"></i><b>4.4.1</b> Limits of deconvolution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="results-and-discussion.html"><a href="results-and-discussion.html#basic-characterisation-of-rhesus-cardiomyocytes"><i class="fa fa-check"></i><b>4.5</b> Basic characterisation of Rhesus Cardiomyocytes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusion-and-future-work.html"><a href="conclusion-and-future-work.html"><i class="fa fa-check"></i><b>5</b> Conclusion and Future Work</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i>Summary</a><ul>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#task-at-hand"><i class="fa fa-check"></i>Task At Hand</a></li>
+<li class="chapter" data-level="" data-path="summary.html"><a href="summary.html#work-done"><i class="fa fa-check"></i>Work Done</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="methods" class="section level1">
+<h1><span class="header-section-number">3</span> Methods</h1>
+<div id="general-analysis-pipeline-of-bulk-rna-seq-data" class="section level2">
+<h2><span class="header-section-number">3.1</span> General Analysis Pipeline of Bulk RNA-Seq Data</h2>
+<p>The analysis pipeline used to process the bulk RNA-Seq data of both in-houses and downloaded datasets, is shown in Figure <a href="methods.html#fig:analysisPipeline">3.1</a>.
+Briefly, the analysis of RNA-Seq started with assessing the quality of raw sequencing data as fastq files using <code>FASTQC</code> <em>(v0.11.4)</em>.
+Once the quality was deemed fit for further processing, the fastq files were mapped to <code>GRCh38/hg38</code> using <code>HISAT2</code> <em>(v2.1.0)</em>, resulting in BAM files.
+The coordinate sorted BAM files were then indexed using <code>SAMTOOLS</code> <em>(v1.9)</em>.
+The number of reads assigned to each feature of the genome was estimated using <code>FeatureCounts</code> of SUBREAD module <em>(v1.6.3)</em> with <code>Homo_sapiens.GRCh38.96.chr.gtf</code> as the reference genome <code>.gtf</code> file.
+The alignment, indexing and abundance estimation were performed on the <em>GWDG-high performance computing (HPC) cluster</em>.
+Count text files were imported into <code>R</code> <em>(v3.6.1)</em> running under macOS Mojave 10.14.5 for further processing.
+The data was normalized to either Z-scale or variable stabilized normalization in R using the DESeq2 package’s <em>(v1.25.10)</em> <code>vst()</code> function.
+PCA plots were made using R’s base function <code>prcomp()</code>.
+The visualization was performed using the <code>ggplot2</code> package <em>(v3.2.1)</em>. Several other packages and few custom functions were used throughout this project. The bash and R scripts can be found <a href="https://gitlab.gwdg.de/h.anandakumar/masterthesis/-/tree/master/R">here</a>, along with the output from <code>sessionInfo()</code> from R.</p>
+<div class="figure"><span id="fig:analysisPipeline"></span>
+<img src="data/RNAseq_flowchart.png" alt="Basic analysis pipeline for Bulk RNA-Seq data used in this project. Briefly, raw sequenced data input as fastq files are run through FASTQC for basic quality checks, after which depending on the quality it either goes through additional steps of quality control or directly to an alignment tool like that of HISAT2. An optional post-alignment, quality control check exists, after which abundance of the transcripts is estimated using a tool such as FeatureCounts. This gived the raw read counts file which needs to then be normalized and then used for further analysis. \newline{}Shapes and their meanings: Parallelograms (inputs), rhombus (decision points), rectangles (processes), oval (termination). \newline{}Abbreviation: VST (variance stabilized transformation), PCA (principal component analysis), .fastq/.fa./fq (raw reads file format), .bam/.sam (binary alignment map, sequence alignment map -- file formats for storing aligned sequence data), .gtf (gene transfer format -- stores information on genes) ." width="100%" />
+<p class="caption">
+Figure 3.1: Basic analysis pipeline for Bulk RNA-Seq data used in this project. Briefly, raw sequenced data input as fastq files are run through FASTQC for basic quality checks, after which depending on the quality it either goes through additional steps of quality control or directly to an alignment tool like that of HISAT2. An optional post-alignment, quality control check exists, after which abundance of the transcripts is estimated using a tool such as FeatureCounts. This gived the raw read counts file which needs to then be normalized and then used for further analysis. Shapes and their meanings: Parallelograms (inputs), rhombus (decision points), rectangles (processes), oval (termination). Abbreviation: VST (variance stabilized transformation), PCA (principal component analysis), .fastq/.fa./fq (raw reads file format), .bam/.sam (binary alignment map, sequence alignment map – file formats for storing aligned sequence data), .gtf (gene transfer format – stores information on genes) .
+</p>
+</div>
+<p>The bulk RNA-Seq data used in this project is collated from different sources, which are tabulated in table <a href="methods.html#tab:dataSource">3.1</a> along with their accession numbers and the numbers of samples<span class="citation"><sup><a href="#ref-kuppusamyLet7FamilyMicroRNA2015">59</a>–<a href="#ref-yanEpigenomicLandscapeHuman2016">63</a></sup></span>.</p>
+<table class="table table-striped table-hover table-bordered table-condensed" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:dataSource">Table 3.1: </span>blah blah
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+paper
+</th>
+<th style="text-align:left;">
+Project_AccessionNumber
+</th>
+<th style="text-align:left;">
+group
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+CM
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+EHM
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+Fetal_Heart
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+Fib
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+ipsc
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+In-House
+</td>
+<td style="text-align:left;">
+Rh
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kuppusamy KT 2015
+</td>
+<td style="text-align:left;">
+PRJNA266045
+</td>
+<td style="text-align:left;">
+Adult_Heart
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Kuppusamy KT 2015
+</td>
+<td style="text-align:left;">
+PRJNA266045
+</td>
+<td style="text-align:left;">
+Fetal_Heart
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mills RJ 2017
+</td>
+<td style="text-align:left;">
+PRJNA362579
+</td>
+<td style="text-align:left;">
+Adult_Heart
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Mills RJ 2017
+</td>
+<td style="text-align:left;">
+PRJNA362579
+</td>
+<td style="text-align:left;">
+EHM
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pavlovic BJ 2018
+</td>
+<td style="text-align:left;">
+PRJNA433831
+</td>
+<td style="text-align:left;">
+Adult_Heart
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Pervolaraki 2018
+</td>
+<td style="text-align:left;">
+E_MTAB_7031
+</td>
+<td style="text-align:left;">
+Fetal_Heart
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Yan L 2016
+</td>
+<td style="text-align:left;">
+PRJNA268504
+</td>
+<td style="text-align:left;">
+Fetal_Heart
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="font-style: italic;">Note: </span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> CM: cardiomyocytes, EHM: engineered heart muscle, Fib: iPSC-induced fibroblasts, Rh: rhesus iPSC-induced cardiomyocytes
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<div id="singleCell" class="section level2">
+<h2><span class="header-section-number">3.2</span> Single Cell Reference Data and CIBERSORTX</h2>
+<p>Efficient deconvolution of bulk data requires a relevant single cell reference to estimate proportions of different cell types.
+For the current work we used reference data obtained by Friedman et al<span class="citation"><sup><a href="#ref-friedmanSingleCellTranscriptomicAnalysis2018">58</a></sup></span> who investigated cardiac differentiation of human pluripoten stem cells and performed single-cell transcriptomic analyses to map fate changes and analyze gene expression patterns during the differentation processes <em>in vitro</em>.
+In this approach 5 distinct time points were sequenced, namely, on days 0 (hiPSC), 2 (germ layer specification), 5 (progenitor cell), 15 (committed cardiac derivative) and 30 (definitive cardiac derivative) of their differentiation protocol.
+Relevant to this project are the last two timepoints — day 15 and day 30.
+Single-cell count data was downloaded from the ArrayExpress database maintained by <a href="https://www.ebi.ac.uk/arrayexpress/">EMBL-EBI</a>, using the accession number E-MTAB-6268.<br />
+CIBERSORTX<span class="citation"><sup><a href="#ref-newmanDeterminingCellType2019">47</a></sup></span> reads a single cell reference input with each single-cell (every column) labelled according to the cell’s phenotype or cluster identifier and bulk data with samples as columns and rownames as genes in both cases.</p>
+<div id="processing-of-single-cell-data" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Processing of Single Cell Data</h3>
+<p>To create the reference file, clustering and <em>de novo</em> identification of cell types from scRNA data was performed according to Friedman et al’s paper<span class="citation"><sup><a href="#ref-friedmanSingleCellTranscriptomicAnalysis2018">58</a></sup></span>.
+Briefly, the outlier genes and cells (outside 3x median absolute deviation) of the number of cells with detected genes, mitochondrial reads, ribosomal genes were filtered out. Post filtering, <code>scran</code> <em>(1.12.1)</em> package was used for cell-to-cell normalization without quickClustering option. PCA and clustering was performed using <code>ascend</code> package <em>(v0.9.93)</em>, following the same parameters as the paper.</p>
+<p>The differentially expressed genes between the clusters were then calculated by the <code>runDiffExpression()</code> from <code>ascend</code> package.
+Friedman et al identified two clusters at each of the last two time points. At Day 15, they define two sub-populations — non-contractile <em>(d15:S1)</em> and committed CM (cCM) <em>(d15:S2)</em> and likewise at Day 30 — non-contractile <em>(d30:S1)</em> and definitive CM (dCM) <em>(d30:S2)</em>.
+To verfiy the steps followed so far and validate the reliable reproduction of the paper, gene ontology analysis of differentially expressed genes within the sub clusters was performed.
+Figure <a href="methods.html#fig:sigMat">3.2</a> confirms that the clusters are consistent with the ones described by Friedman et al.</p>
+<div class="figure"><span id="fig:sigMat"></span>
+<img src="data/01_MM.png" alt="scRNA-Seq Reference Dataset. Post-processing and before feeding it into CIBERSORTx, the reference data set was analyzed to ensure its reliable reproduction of the sub-groups as defined by the paper. Here, at both time points there is a sub-group which is enriched for non-contractile features and another for cardiomyocyte features. The size of the circle corresponds to the fold enrichment observed.  Reproduction of Figure 2 (J and M) from Friedman 2018." width="100%" />
+<p class="caption">
+Figure 3.2: scRNA-Seq Reference Dataset. Post-processing and before feeding it into CIBERSORTx, the reference data set was analyzed to ensure its reliable reproduction of the sub-groups as defined by the paper. Here, at both time points there is a sub-group which is enriched for non-contractile features and another for cardiomyocyte features. The size of the circle corresponds to the fold enrichment observed. Reproduction of Figure 2 (J and M) from Friedman 2018.
+</p>
+</div>
+<p>CIBERSORTX is an online tool with user-friendly GUI with detailed tutorials on the developer’s <a href="https://cibersortx.stanford.edu">webpage</a>. Firstly, a <code>signature matrix</code> was created using this single cell reference file using the <code>Create Signature Matrix</code> function using <code>scRNA-Seq</code> as the input data type and all other settings were left at default.
+In the second step of deconvolution analysis, <code>mode</code> is set to <code>Impute Cell Fractions</code> and under <code>Custom</code> mode, the previously run signature matrix file is chosen from the drop down menu and a mixture file, previously uploaded bulk RNA-Seq data, is chosen. The option <code>enable batch correction</code> was used with <code>B-Mode</code>, which is advised for removing technical differences between the platforms used for the signature and bulk matrices. Finally, for the <code>permutations for significance analysis</code> option, the most stringent, <code>1000</code> option was chosen.</p>
+</div>
+</div>
+<div id="analysis-of-rhesus-rna-seq" class="section level2">
+<h2><span class="header-section-number">3.3</span> Analysis of Rhesus RNA-Seq</h2>
+<p>The bulk in-house samples from Rhesus were mapped using <code>HISAT2</code> with default parameters. There was no indexed reference genome readily available, so the entire genome was downloaded in from <code>USCS Genome Browser</code> — <code>rheMac10</code> assembly and converted from 2bit format to Fasta format using <code>twoBitToFa</code> available at <a href="http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/">USCS</a>.
+Post alignment, abundance estimation was performed using the <code>FeatureCounts</code> tool which requires a valid .gtf file. The file was prepared using the following commands:</p>
+<blockquote>
+<p>#Download</p>
+<p><code>wget -c -O mm9.refGene.txt.gz</code> <a href="http://hgdownload.soe.ucsc.edu/goldenPath/mewman/database/refGene.txt.gz">filePathLinked</a></p>
+<p>#Unzip the file and download the genePredToGtf tool from ucsc</p>
+<p><code>cut -f 2- rheMac10.refGene.txt &gt; refGene.input</code></p>
+<p><code>./genePredToGtf file refGene.input rheMac10refGene.gtf</code></p>
+<p><code>cat rheMac10refGene.gtf | sort -k1,1 -k4,4n &gt; rheMac10refGene.gtf.sorted</code></p>
+</blockquote>
+<p>This <code>rheMac10refGene.gtf.sorted</code> file was used as the input .gtf file for <code>FeatureCounts</code>.
+This outputs the raw counts file of the <em>Rhesus macaque</em> sample mapped to it’s own genome. To make comparisons with the human RNA-Seq samples relevant, orthologous genes between the two species were determined and only those with 1:1 orthology were used for further analysis.
+Orthologous genes were obtained from <a href="http://www.ensembl.org/biomart/martview/">ensembl-biomart</a>.
+The gene lengths of each gene was used for both species as a means of normalization within DESEQ2 by adding a matrix of gene lengths within the <code>assays(dds)[[&quot;avgTxLength&quot;]] &lt;- geneLengthMatrix</code> slot.</p>
+</div>
+<div id="estBacVir" class="section level2">
+<h2><span class="header-section-number">3.4</span> Estimating Bacterial and Viral Contaminants</h2>
+<p>DecontaMiner<span class="citation"><sup><a href="#ref-sangiovanniTrashTreasureDetecting2019">64</a></sup></span> was used to estimate the possible bacterial and viral contaminants in a representative subset of bulk samples of this project.
+Briefly, the <em>unmapped reads</em> i.e., those that failed to map to the reference genome were collected in a separate directory and mapped to bacterial and viral reads using the genome databases (NCBI nt) using MegaBLAST algorithm, specifying the number of allowed mismatches/gaps and the alignment length.
+The BLAST databases have been curated by downloading the sequences of the complete genomes from the RefSeq repository.
+These .fasta files were assembled into blast databases by running the <code>makeblastdb</code> command.
+Files containing discarded reads along the pipeline are also generated — the low quality ones, ones mapped to mtRNA/rRNA and ambiguous and unaligned reads.
+The second part of the pipeline, involves setting a match count threshold (MCT) — minimum number of reads successfully mapped to a single organism to consider it a contaminant.
+This parameter was set at 100 (default is 5).
+The pipeline once run results in a table containing all the matches satisfying the alignment criteria.</p>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-newmanDeterminingCellType2019">
+<p>47. Newman, A. M. <em>et al.</em> Determining cell type abundance and expression from bulk tissues with digital cytometry. <em>Nature Biotechnology</em> <strong>37</strong>, 773–782 (2019).</p>
+</div>
+<div id="ref-friedmanSingleCellTranscriptomicAnalysis2018">
+<p>58. Friedman, C. E. <em>et al.</em> Single-Cell Transcriptomic Analysis of Cardiac Differentiation from Human PSCs Reveals HOPX-Dependent Cardiomyocyte Maturation. <em>Cell Stem Cell</em> <strong>23</strong>, 586–598.e8 (2018).</p>
+</div>
+<div id="ref-kuppusamyLet7FamilyMicroRNA2015">
+<p>59. Kuppusamy, K. T. <em>et al.</em> Let-7 family of microRNA is required for maturation and adult-like metabolism in stem cell-derived cardiomyocytes. <em>Proceedings of the National Academy of Sciences of the United States of America</em> <strong>112</strong>, E2785–2794 (2015).</p>
+</div>
+<div id="ref-yanEpigenomicLandscapeHuman2016">
+<p>63. Yan, L. <em>et al.</em> Epigenomic Landscape of Human Fetal Brain, Heart, and Liver. <em>The Journal of Biological Chemistry</em> <strong>291</strong>, 4386–4398 (2016).</p>
+</div>
+<div id="ref-sangiovanniTrashTreasureDetecting2019">
+<p>64. Sangiovanni, M., Granata, I., Thind, A. S. &amp; Guarracino, M. R. From trash to treasure: Detecting unexpected contamination in unmapped NGS data. <em>BMC Bioinformatics</em> <strong>20</strong>, 168 (2019).</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="aims-and-objectives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="results-and-discussion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
