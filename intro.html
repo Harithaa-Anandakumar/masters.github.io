@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Introduction | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</title>
+  <meta name="description" content="1 Introduction | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Introduction | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Introduction | RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes" />
+  
+  
+  
+
+<meta name="author" content="Harithaa Anandakumar" />
+
+
+<meta name="date" content="2020-01-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="aims-and-objectives.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.0/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.46.1/plotly-latest.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#need-for-better-therapeutics"><i class="fa fa-check"></i><b>1.1</b> Need for better therapeutics</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#immunological-responses-in-transplantations"><i class="fa fa-check"></i><b>1.1.1</b> Immunological Responses in Transplantations</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#engineered-human-myocardium"><i class="fa fa-check"></i><b>1.2</b> Engineered Human Myocardium</a></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#rnaseq"><i class="fa fa-check"></i><b>1.3</b> RNA Sequencing</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#bulkrna"><i class="fa fa-check"></i><b>1.3.1</b> Bulk RNA Seq</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#scrna"><i class="fa fa-check"></i><b>1.3.2</b> Single-cell RNA Seq</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#compdeconv"><i class="fa fa-check"></i><b>1.4</b> Computational deconvolution</a></li>
+<li class="chapter" data-level="1.5" data-path="intro.html"><a href="intro.html#exploratory-data-analysis-in-rna-sequencing"><i class="fa fa-check"></i><b>1.5</b> Exploratory Data Analysis in RNA-Sequencing</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="intro.html"><a href="intro.html#pca"><i class="fa fa-check"></i><b>1.5.1</b> Principal Component Analysis (PCA)</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="intro.html"><a href="intro.html#rationale-for-the-current-work"><i class="fa fa-check"></i><b>1.6</b> Rationale for the current work</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="aims-and-objectives.html"><a href="aims-and-objectives.html"><i class="fa fa-check"></i><b>2</b> Aims and Objectives</a></li>
+<li class="chapter" data-level="3" data-path="materials-and-methods.html"><a href="materials-and-methods.html"><i class="fa fa-check"></i><b>3</b> Materials and Methods</a><ul>
+<li class="chapter" data-level="3.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#general-analysis-pipeline-of-bulk-rna-seq-data"><i class="fa fa-check"></i><b>3.1</b> General Analysis Pipeline of Bulk RNA-Seq Data</a></li>
+<li class="chapter" data-level="3.2" data-path="materials-and-methods.html"><a href="materials-and-methods.html#single-cell-reference-data-and-cibersortx"><i class="fa fa-check"></i><b>3.2</b> Single Cell Reference Data and CIBERSORTX</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="materials-and-methods.html"><a href="materials-and-methods.html#processing-of-single-cell-data"><i class="fa fa-check"></i><b>3.2.1</b> Processing of Single Cell Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="materials-and-methods.html"><a href="materials-and-methods.html#analysis-of-rhesus-rna-seq"><i class="fa fa-check"></i><b>3.3</b> Analysis of Rhesus RNA-Seq</a></li>
+<li class="chapter" data-level="3.4" data-path="materials-and-methods.html"><a href="materials-and-methods.html#estBacVir"><i class="fa fa-check"></i><b>3.4</b> Estimating Bacterial And Viral Contaminants</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="results-and-discussion.html"><a href="results-and-discussion.html"><i class="fa fa-check"></i><b>4</b> Results and Discussion</a><ul>
+<li class="chapter" data-level="4.1" data-path="results-and-discussion.html"><a href="results-and-discussion.html#general-workflow-and-mapping-statistics"><i class="fa fa-check"></i><b>4.1</b> General Workflow and Mapping Statistics</a></li>
+<li class="chapter" data-level="4.2" data-path="results-and-discussion.html"><a href="results-and-discussion.html#exploring-potential-microbial-contamination-using-rna-seq-data"><i class="fa fa-check"></i><b>4.2</b> Exploring Potential Microbial Contamination using RNA-Seq Data</a></li>
+<li class="chapter" data-level="4.3" data-path="results-and-discussion.html"><a href="results-and-discussion.html#exploring-the-datasets"><i class="fa fa-check"></i><b>4.3</b> Exploring the datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="conclusion-and-future-work.html"><a href="conclusion-and-future-work.html"><i class="fa fa-check"></i><b>5</b> Conclusion and Future Work</a></li>
+<li class="chapter" data-level="6" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>6</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">RNA-Sequencing to improve characterisation and production of iPSC-induced cardiomyocytes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>There is growing scientific evidence and recognition that human actions both directly and indirectly have profoundly changed the Earth system, in a continously accelerating process, commonly called as the “Anthropocene”. Human mortality, one of the very few certainities of human life has also not been spared by this radical change <span class="citation">(Moysés and Soares <a href="#ref-moysesPlanetaryHealthAnthropocene2019">2019</a>)</span>. Life expectancy has drastically increased in the last century — for instance, an infant born in 1900 could expect to live upto 32.0 years (average life expectancy in 1900 globaly) and the same number is 72.6 years for an infant born in 2019.
+In 1900, the top three causes of death were infectious diseases — flu and pneumonia, tuberculosis and gastrointestinal infections. Enormous improvements in public health, sanitation and medical inventions and treatments such as vaccines and antibiotics led to a sharp reduction in infectious diseases which now account for less than 20% of deaths globally.
+In the same time frame, there has been a significant increase in the proportion of deaths caused by more chronic, non communicable diseases/conditions  (NCD). Taken together, we see an aging population strained by NCDs of which cardiovascular diseases  (CVD) are the most pronounced (see <a href="#fig:causes-of-death"><strong>??</strong></a>). Almost half of the deaths attributed to CVDs are caused due to heart failure (HF).
+Pharmacological interventions are capable of only alleviating the symptoms of HF, despite impressive improvements in modern medicine, rendering it a progressive, terminal disease. Currently, the overall survival rate at one, five and ten years after a diagnosis of heart failure is estimated to be 75.9%, 45.5% and 24.5% respectively <span class="citation">(Taylor et al. <a href="#ref-taylorTrendsSurvivalDiagnosis2019">2019</a>)</span>.<br />
+It is estimated that 1-2% of the healthcare budget is spent on HF <span class="citation">(Liao, Allen, and Whellan <a href="#ref-liaoEconomicBurdenHeart2008">2008</a>)</span>, while the global economic budern is estimated at $108 billion per annum <span class="citation">(Cook et al. <a href="#ref-cookAnnualGlobalEconomic2014">2014</a>)</span> and in Germany the annual prevalence-based costs for heart failure patients are around €25,532 <span class="citation">(Lesyuk, Kriza, and Kolominsky-Rabas <a href="#ref-lesyukCostofillnessStudiesHeart2018">2018</a>)</span>. Increasing proportion of elderly in western societies and with developing nations following suit, it is only expected that the incidence of HF would be on the rise. Yet, this debilitating and expensive disease’s only viable treatment in terms of long-term life quality and mortality is a heart transplant. As per one study <span class="citation">(Trivedi et al. <a href="#ref-trivedi574RiskFactors2016">2016</a>)</span>, 15% of patients died while waiting for a donor heart (at 180 days after listing), elucidating the severity of shortage of viable donor hearts. As of February 2020, there are a total of 1082 people on the heart transplant waitlist within the EuroZone as per Eurotransplant statistics <span class="citation">(“Eurotransplant - Statistics,” <a href="#ref-EurotransplantStatistics">n.d.</a>)</span>.</p>
+<div class="figure"><span id="fig:causes-of-death1"></span>
+<div id="htmlwidget-48c2b83d275ee74a128b" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-48c2b83d275ee74a128b">{"x":{"data":[{"orientation":"h","width":[0.699999999999999,0.700000000000003,0.699999999999999,0.7,0.700000000000003,0.700000000000003,0.700000000000003,0.700000000000003,0.700000000000003,0.700000000000003,0.699999999999999,0.700000000000003,0.699999999999999,0.699999999999999,0.700000000000003,0.699999999999999,0.700000000000001,0.700000000000003,0.699999999999999,0.700000000000003,0.700000000000003,0.699999999999999,0.700000000000003,0.699999999999999,0.7,0.700000000000003,0.7,0.699999999999999,0.700000000000003,0.699999999999999,0.700000000000003,0.7],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[0.2880211054,2.558606074,0.231770992,0.026445,17.7909489,2.514618901,1.230168046,3.91419603,1.32286792,2.377684942,0.1263905911,9.556244807,0.3406391678,0.1206319721,0.6198266347,0.2952104254,0.4053462409,0.9544917472,0.1666125484,1.18367209,1.243067728,0.1936393105,1.783769795,0.1849342418,0.009602935057,1.569555871,0.05334951878,0.2699969177,0.7938234691,0.1297201457,1.369848959,0.07237053192],"y":[13,29,11,2,32,28,21,30,23,27,6,31,15,5,17,14,16,19,8,20,22,10,26,9,1,25,3,12,18,7,24,4],"text":["highlight..........1: Meningitis<br />highlight..........2:  0.288021105<br />highlight..........3: #BEBEBECC<br />highlight..........group: 13<br />colour: NA<br />y: Meningitis<br />value:  0.288021105<br />y: 13<br />y: #BEBEBECC","highlight..........1: Lower.respiratory.infections<br />highlight..........2:  2.558606074<br />highlight..........3: #BEBEBECC<br />highlight..........group: 29<br />colour: NA<br />y: Lower.respiratory.infections<br />value:  2.558606074<br />y: 29<br />y: #BEBEBECC","highlight..........1: Protein.energy.malnutrition<br />highlight..........2:  0.231770992<br />highlight..........3: #BEBEBECC<br />highlight..........group: 11<br />colour: NA<br />y: Protein.energy.malnutrition<br />value:  0.231770992<br />y: 11<br />y: #BEBEBECC","highlight..........1: Terrorism<br />highlight..........2:  0.026445000<br />highlight..........3: #BEBEBECC<br />highlight..........group: 2<br />colour: NA<br />y: Terrorism<br />value:  0.026445000<br />y: 2<br />y: #BEBEBECC","highlight..........1: Cardiovascular.diseases<br />highlight..........2: 17.790948900<br />highlight..........3: #BEBEBECC<br />highlight..........group: 32<br />colour: NA<br />y: Cardiovascular.diseases<br />value: 17.790948900<br />y: 32<br />y: #BEBEBECC","highlight..........1: Dementia<br />highlight..........2:  2.514618901<br />highlight..........3: #BEBEBECC<br />highlight..........group: 28<br />colour: NA<br />y: Dementia<br />value:  2.514618901<br />y: 28<br />y: #BEBEBECC","highlight..........1: Kidney.disease<br />highlight..........2:  1.230168046<br />highlight..........3: #BEBEBECC<br />highlight..........group: 21<br />colour: NA<br />y: Kidney.disease<br />value:  1.230168046<br />y: 21<br />y: #BEBEBECC","highlight..........1: Respiratory.diseases<br />highlight..........2:  3.914196030<br />highlight..........3: #BEBEBECC<br />highlight..........group: 30<br />colour: NA<br />y: Respiratory.diseases<br />value:  3.914196030<br />y: 30<br />y: #BEBEBECC","highlight..........1: Liver.diseases<br />highlight..........2:  1.322867920<br />highlight..........3: #BEBEBECC<br />highlight..........group: 23<br />colour: NA<br />y: Liver.diseases<br />value:  1.322867920<br />y: 23<br />y: #BEBEBECC","highlight..........1: Digestive.diseases<br />highlight..........2:  2.377684942<br />highlight..........3: #BEBEBECC<br />highlight..........group: 27<br />colour: NA<br />y: Digestive.diseases<br />value:  2.377684942<br />y: 27<br />y: #BEBEBECC","highlight..........1: Hepatitis<br />highlight..........2:  0.126390591<br />highlight..........3: #BEBEBECC<br />highlight..........group: 6<br />colour: NA<br />y: Hepatitis<br />value:  0.126390591<br />y: 6<br />y: #BEBEBECC","highlight..........1: Cancers<br />highlight..........2:  9.556244807<br />highlight..........3: #BEBEBECC<br />highlight..........group: 31<br />colour: NA<br />y: Cancers<br />value:  9.556244807<br />y: 31<br />y: #BEBEBECC","highlight..........1: Parkinson.disease<br />highlight..........2:  0.340639168<br />highlight..........3: #BEBEBECC<br />highlight..........group: 15<br />colour: NA<br />y: Parkinson.disease<br />value:  0.340639168<br />y: 15<br />y: #BEBEBECC","highlight..........1: Fire<br />highlight..........2:  0.120631972<br />highlight..........3: #BEBEBECC<br />highlight..........group: 5<br />colour: NA<br />y: Fire<br />value:  0.120631972<br />y: 5<br />y: #BEBEBECC","highlight..........1: Malaria<br />highlight..........2:  0.619826635<br />highlight..........3: #BEBEBECC<br />highlight..........group: 17<br />colour: NA<br />y: Malaria<br />value:  0.619826635<br />y: 17<br />y: #BEBEBECC","highlight..........1: Drowning<br />highlight..........2:  0.295210425<br />highlight..........3: #BEBEBECC<br />highlight..........group: 14<br />colour: NA<br />y: Drowning<br />value:  0.295210425<br />y: 14<br />y: #BEBEBECC","highlight..........1: Homicide<br />highlight..........2:  0.405346241<br />highlight..........3: #BEBEBECC<br />highlight..........group: 16<br />colour: NA<br />y: Homicide<br />value:  0.405346241<br />y: 16<br />y: #BEBEBECC","highlight..........1: HIV.AIDS<br />highlight..........2:  0.954491747<br />highlight..........3: #BEBEBECC<br />highlight..........group: 19<br />colour: NA<br />y: HIV.AIDS<br />value:  0.954491747<br />y: 19<br />y: #BEBEBECC","highlight..........1: Drug.use.disorders<br />highlight..........2:  0.166612548<br />highlight..........3: #BEBEBECC<br />highlight..........group: 8<br />colour: NA<br />y: Drug.use.disorders<br />value:  0.166612548<br />y: 8<br />y: #BEBEBECC","highlight..........1: Tuberculosis<br />highlight..........2:  1.183672090<br />highlight..........3: #BEBEBECC<br />highlight..........group: 20<br />colour: NA<br />y: Tuberculosis<br />value:  1.183672090<br />y: 20<br />y: #BEBEBECC","highlight..........1: Road.injuries<br />highlight..........2:  1.243067728<br />highlight..........3: #BEBEBECC<br />highlight..........group: 22<br />colour: NA<br />y: Road.injuries<br />value:  1.243067728<br />y: 22<br />y: #BEBEBECC","highlight..........1: Maternal.disorders<br />highlight..........2:  0.193639310<br />highlight..........3: #BEBEBECC<br />highlight..........group: 10<br />colour: NA<br />y: Maternal.disorders<br />value:  0.193639310<br />y: 10<br />y: #BEBEBECC","highlight..........1: Neonatal.disorders<br />highlight..........2:  1.783769795<br />highlight..........3: #BEBEBECC<br />highlight..........group: 26<br />colour: NA<br />y: Neonatal.disorders<br />value:  1.783769795<br />y: 26<br />y: #BEBEBECC","highlight..........1: Alcohol.use.disorders<br />highlight..........2:  0.184934242<br />highlight..........3: #BEBEBECC<br />highlight..........group: 9<br />colour: NA<br />y: Alcohol.use.disorders<br />value:  0.184934242<br />y: 9<br />y: #BEBEBECC","highlight..........1: Natural.disasters<br />highlight..........2:  0.009602935<br />highlight..........3: #BEBEBECC<br />highlight..........group: 1<br />colour: NA<br />y: Natural.disasters<br />value:  0.009602935<br />y: 1<br />y: #BEBEBECC","highlight..........1: Diarrheal.diseases<br />highlight..........2:  1.569555871<br />highlight..........3: #BEBEBECC<br />highlight..........group: 25<br />colour: NA<br />y: Diarrheal.diseases<br />value:  1.569555871<br />y: 25<br />y: #BEBEBECC","highlight..........1: Heat..hot.and.cold.exposure.<br />highlight..........2:  0.053349519<br />highlight..........3: #BEBEBECC<br />highlight..........group: 3<br />colour: NA<br />y: Heat..hot.and.cold.exposure.<br />value:  0.053349519<br />y: 3<br />y: #BEBEBECC","highlight..........1: Nutritional.deficiencies<br />highlight..........2:  0.269996918<br />highlight..........3: #BEBEBECC<br />highlight..........group: 12<br />colour: NA<br />y: Nutritional.deficiencies<br />value:  0.269996918<br />y: 12<br />y: #BEBEBECC","highlight..........1: Suicide<br />highlight..........2:  0.793823469<br />highlight..........3: #BEBEBECC<br />highlight..........group: 18<br />colour: NA<br />y: Suicide<br />value:  0.793823469<br />y: 18<br />y: #BEBEBECC","highlight..........1: Conflict<br />highlight..........2:  0.129720146<br />highlight..........3: #BEBEBECC<br />highlight..........group: 7<br />colour: NA<br />y: Conflict<br />value:  0.129720146<br />y: 7<br />y: #BEBEBECC","highlight..........1: Diabetes<br />highlight..........2:  1.369848959<br />highlight..........3: #BEBEBECC<br />highlight..........group: 24<br />colour: NA<br />y: Diabetes<br />value:  1.369848959<br />y: 24<br />y: #BEBEBECC","highlight..........1: Poisonings<br />highlight..........2:  0.072370532<br />highlight..........3: #BEBEBECC<br />highlight..........group: 4<br />colour: NA<br />y: Poisonings<br />value:  0.072370532<br />y: 4<br />y: #BEBEBECC"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(190,190,190,0.8)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"h","width":0.700000000000003,"base":0,"x":[17.7909489],"y":[32],"text":"y: Cardiovascular.diseases<br />value: 17.79095<br />y: Cardiovascular.diseases<br />y: Cardiovascular.diseases<br />y: Cardiovascular.diseases<br />value: 17.79095<br />y: Cardiovascular.diseases<br />y: Cardiovascular.diseases","type":"bar","marker":{"autocolorscale":false,"color":"rgba(178,24,43,1)","line":{"width":1.88976377952756,"color":"transparent"}},"name":"Cardiovascular.diseases","legendgroup":"Cardiovascular.diseases","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.2283105022831,"r":7.30593607305936,"b":13.8812785388128,"l":10.958904109589},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0,17.7909489],"tickmode":"array","ticktext":[null],"categoryorder":"array","categoryarray":[null],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":13.2835201328352},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,32.6],"tickmode":"array","ticktext":[null],"categoryorder":"array","categoryarray":[null],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":10.6268161062682},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":null,"family":null,"size":0}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895},"y":1},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"99ef5df6f151":{"x":{},"y":{},"fill":{},"colour":{},"x.1":{},"y.1":{},"fill.1":{},"type":"bar"},"99ef7f5d2d08":{"x":{},"y":{},"fill":{},"x.1":{},"y.1":{},"fill.1":{}}},"cur_data":"99ef5df6f151","visdat":{"99ef5df6f151":["function (y) ","x"],"99ef7f5d2d08":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1.1: Number of Deaths by Cause in the world in 2017
+</p>
+</div>
+<pre><code>## null device 
+##           1</code></pre>
+<div class="figure"><span id="fig:causes-of-death2"></span>
+<img src="data/00-animated-barplot-transition.gif" alt="Number of Deaths by Cause in the world in 2017"  />
+<p class="caption">
+Figure 1.2: Number of Deaths by Cause in the world in 2017
+</p>
+</div>
+<div class="figure"><span id="fig:causes-of-death3"></span>
+<img src="data/00-animated-lineplot-transition.gif" alt="Number of Deaths by Cause in the world in 2017"  />
+<p class="caption">
+Figure 1.3: Number of Deaths by Cause in the world in 2017
+</p>
+</div>
+<p>Although there are myriad causes of HF, such as isichemic heart disease, aortic or mitral regurtitation (volume stress), aortic or mitral stenosis (pressure stress), congenital cardiomyopathy, constrictive pericarditis, alcohol excess, anemia, thyrotoxicosis, septicemia, acromegaly, they commonoly operate through the central mechanism of reduced ventricular function. Consequently, the heart is unable to adequately perfuse the tissues, resulting in a wide variety of clinical symptoms including but not limited to the ones shown in Table 1.1. These can be considered as compensatory measures, for example, an initial phase of cardiac hypertrophy is seen to compensate for the loss of viable cardiomyocytes resulting in a transient maintenance of the ejection fraction, sustainance of heart rate and blood pressure and thereby maintaining organ perfusion. Over time, these remodelling mechanisms become detrimental and end up worsening the left ventricular function. In effect, a negative feed-forward pathophyiological loop governed by a dissonant neurohormonal system and imapaired calcium signalling is established in late-stage HF. Most of the pharamacological treatments currently available for HF (diuretics, beta blockers, angiotensin receptor blockers, angiotensin converting enzyme inhibitors aldosterone antagonists, etc) do not halt or address the underlying pathophysiology. Device therapies are currently the alternatives to pharmacological drugs. These include cardioverter-defibrillator (ICD) which are implanted in severe cases as a means of primary or secondary prevention of sudden cardiac death. Ventricular assist device acts as a bridge to a heart transplantation which is considered the only viable option for treating end-stage HF in terms of long-term quality of life and mortality. Given this current scenario, it is vital to explore other avenues for the treatment and management of HF.</p>
+<div id="need-for-better-therapeutics" class="section level2">
+<h2><span class="header-section-number">1.1</span> Need for better therapeutics</h2>
+<p>Modern medicine has vastly improved the management of heart failure, yet it still remains a debilitating disease that would immensely benefit from newer therapies.
+Adult human hearts are terminally differentiated and post-mitotic.
+A straight-forward approach would be to counteract the progressive loss of cardiomyocytes by supplementing the heart with fresh CMs <span class="citation">(Bergmann et al. <a href="#ref-bergmannDynamicsCellGeneration2015">2015</a>)</span>.
+This has been made possible largely due to the introduction of human embryonic <span class="citation">(Thomson et al. <a href="#ref-thomsonEmbryonicStemCell1998">1998</a>)</span> and induced pluripotent stem cells  <span class="citation">(Takahashi et al. <a href="#ref-takahashiInductionPluripotentStem2007">2007</a>)</span>.
+iPSCs are defined by their unlimited proliferation capacity and ability to differentiate into any given cell type (derivatives of all three germ layers) upon adequate stimuli.
+Effective and defined protocols of directed differentiation of various iPSCs to a cardiac lineage/cell fate (apart from various other cell types) have been developed and covered in the review <span class="citation">(Burridge et al. <a href="#ref-burridgeProductionNovoCardiomyocytes2012">2012</a>)</span>.
+The straight-forward approach of direct supplementation of CMs is fraught with its own key limitation: lack of long term engraftment of cardiomyocytes (varies based on the modality of delivery, covered below) <span class="citation">(Nguyen et al. <a href="#ref-nguyenPotentialStrategiesAddress2016">2016</a>)</span>.
+Several other stratergies to strenghten/remuscularize the heart such as, converting scar into healthy heart muscle <span class="citation">(Inagawa and Ieda <a href="#ref-inagawaDirectReprogrammingMouse2013">2013</a>)</span>,inducing endogenous cardiomyocyte regeneration and proliferation <span class="citation">(Kubin et al. <a href="#ref-kubinOncostatinMajorMediator2011">2011</a>)</span>, and methods to save the remaining cardiomyocytes from cell death by modulating paracrine factors <span class="citation">(Gnecchi et al. <a href="#ref-gnecchiParacrineActionAccounts2005">2005</a>)</span> have been investigated (see <a href="intro.html#fig:cmDelivery">1.4</a>).
+Despite the limitation in long term engraftment, cardiomyocyte implantation remains the most plausible option in a translational and mechanisitic stand point. It is currently known that cardiomyocytes supplemented as a cell injection have the worst retention and epicardial delivery of cardiomyocytes as tissue engineered patches show an improved retention <span class="citation">(Sekine et al. <a href="#ref-sekineCardiacCellSheet2011">2011</a>)</span>.
+Animal studies indicate that transplantation of engineered heart muscle (EHM) , made from human induced pluripotent stem cells (hIPSCs) , to a failing heart as a means of remuscularization showed improved cardiomyocyte proliferation, vascularization, unimpaired electrical coupling and improved left ventricular function <span class="citation">(Yang et al. <a href="#ref-yangCardiacEngraftmentGeneticallyselected2015">2015</a>)</span>.
+Additionally, these engineered patches have also not shown to be associated with an increased propensity for arrhythmia <span class="citation">(Weinberger et al. <a href="#ref-weinbergerCardiacRepairGuinea2016">2016</a>; Yang et al. <a href="#ref-yangCardiacEngraftmentGeneticallyselected2015">2015</a>; Zimmermann et al. <a href="#ref-zimmermannEngineeredHeartTissue2006">2006</a>)</span>.
+More recently a macaque model of heart failure (with human-like cardiovascular physiology) studied by <span class="citation">(Liu et al. <a href="#ref-liuHumanEmbryonicStem2018">2018</a>)</span>, showed near normal levels of contractile function after 3 months of transplantation of cardiomyocytes derived from  human embryonic stem cells (hESCs).
+Collectively, these preclinical studies hold promise for the utilization of cardiomyocytes and EHMs thereby derived as a potential therapeutic source for failing human hearts.</p>
+<div class="figure" style="text-align: center"><span id="fig:cmDelivery"></span>
+<img src="data/cmDeliveryStrategies.png" alt="Delivery Strategies" width="100%" />
+<p class="caption">
+Figure 1.4: Delivery Strategies
+</p>
+</div>
+<p>Other Option</p>
+<div class="figure" style="text-align: center"><span id="fig:option"></span>
+<img src="data/blah.png" alt="Meh meh " width="100%" />
+<p class="caption">
+Figure 1.5: Meh meh
+</p>
+</div>
+<div id="immunological-responses-in-transplantations" class="section level3">
+<h3><span class="header-section-number">1.1.1</span> Immunological Responses in Transplantations</h3>
+<p>The possibility of personalized cell therpay enabled by usage of autologous iPSCs eliminated problems associated with immune rejection. Yet, the cost, duration of obtaining clinical-grade iPSC cell lines along with their differentiation into required cell type for transplantation and verification of safety and efficacy have slowed the introduction of iPSC technology into routine clinical practice <span class="citation">(Neofytou et al. <a href="#ref-neofytouHurdlesClinicalTranslation2015">2015</a>; Sayed, Liu, and Wu <a href="#ref-sayedTranslationHumanInducedPluripotent2016">2016</a>)</span>.
+These reasons have led to the scientific community to believe that allogenic transplantation<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of thoroughly characterized iPSCs could be a more plausible approach of cell therapy <span class="citation">(Martin <a href="#ref-martinTherapeuticApplicationPluripotent2017">2017</a>)</span>.
+Histocompatibility remains the main problem of using allogenic cells and tissues, including the ones that are derived as a result of iPSC differentiation. Roughly 20,000 HLA alleles are known <a href="http://www.ebi.ac.uk/imgt/hla/">http://www.ebi.ac.uk/imgt/hla/</a>.
+This polymorphism is the reason why appropriate selection of donors for transplantation is crucial and difficult. Usually a perfect donor match is hard to find, and there is always some degree of mismatch between the recipient’s and donor’s major histocompatility complex (MHC)  genes necessitating the systemic administration of immunosuppressive drugs.
+To circumvent these problems, the idea of an HLA-haplotype bank of pluripotent stem cell lines was first proposed for the UK population <span class="citation">(Taylor et al. <a href="#ref-taylorBankingHumanEmbryonic2005">2005</a>)</span>.
+The idea here is to establish efficiently chosen samples with sufficient HLA diversity to provide a reasonable HLA match for a large percentage of the target population.
+For instance, a cell bank of 30 iPSC cell lines would be able to find a three-locus match in 82.2% of the Japanese population <span class="citation">(Nakatsuji, Nakajima, and Tokunaga <a href="#ref-nakatsujiHLAhaplotypeBankingIPS2008">2008</a>)</span>. These numbers vary depending on the diversity of the population.
+Inspite of these optimistic forecasts, such HLA haplotype banks maybe insufficient to prevent allogenic rejection as the minor mH antigens will still be inevitably different in unrelated donors and interactions of innate immunity is not accounted for <span class="citation">(Bogomiakova, Eremeev, and Lagarkova <a href="#ref-bogomiakovaHomeStrangersIt2019">2019</a>)</span>. And these banks would only work with sustained and intense international cooperation and haplotyping a huge proportion of the population.
+An alternative strategy is to minimize the immunogenicity of stem cells by using genome editing technology and thereby creatig an <em>universal stem cell line</em> suitable for transplantion into anyone.
+Generation of such <em>hypoimmunogenic</em> hIPSCs are on-way <span class="citation">(Han et al. <a href="#ref-hanGenerationHypoimmunogenicHuman2019">2019</a>)</span>.</p>
+</div>
+</div>
+<div id="engineered-human-myocardium" class="section level2">
+<h2><span class="header-section-number">1.2</span> Engineered Human Myocardium</h2>
+<p>To make EHMS, iPSCs are differentiated to not only cardiomyocytes, but also supportive stromal cell population using serum-free, GMP-friendly media and protocols.
+These differentiated cells are then combined in a fixed, optimized ratio within a collagen matrix.
+This mixture is then pipetted onto circular casting molds to make EHM rings or onto other shapes of molds to obtain the desired output form of the EHM see <a href="intro.html#fig:patch-fig">1.6</a>.
+Ideally, several such EHMs would be stacked to make a muscle layer of optimum thickness and sutured onto the failing myocardium, which would then integrate and assist mechanically in pumping.
+Translation to clinics require a production protocol that is compliant with current good manufacturing practices (cGMP). This has already been established and optimized by the working group over the years <span class="citation">(Tiburcy et al. <a href="#ref-tiburcyDefinedEngineeredHuman2017">2017</a>)</span> for the production of EHMs.</p>
+<blockquote>
+<p>write about characteristics of EHM
+maturity/ immaturity? more on protocol?
+get more images for patches</p>
+</blockquote>
+<div class="figure" style="text-align: center"><span id="fig:patch-fig"></span>
+<img src="data/Patch_Zimmermann_Feb_2017.png" alt="Various shapes and forms of EHMs for clinical and experimental applications" width="50%" />
+<p class="caption">
+Figure 1.6: Various shapes and forms of EHMs for clinical and experimental applications
+</p>
+</div>
+</div>
+<div id="rnaseq" class="section level2">
+<h2><span class="header-section-number">1.3</span> RNA Sequencing</h2>
+<p>Information stored in genes as DNA is transcribed into RNA and ultimately translated into proteins, this is the central dogma of biology, see <a href="intro.html#fig:centralDog">1.7</a>.
+The transcription of a subset of genes into RNA molecules gives a cell it’s specificity and identity, along with regulating its activities.
+‘Transcriptome’ is a term that refers to the total RNA at a given timepoint, whether from a population of cells or a single cell.
+It is also used to refer to the total mRNA, which focuses on gene expression.
+Previously, gene expression studies relied on techniques such as northern blots and quantitative polymerase chain reaction  (qPCR) which are low-throughput and are limited to measuring a single transcript, albeit can now be automated.
+The last two to three decades has seen the evolution of assays to quantify genome-wide gene expression, better known as transcriptomics. Microarrays, a hybridization based approach, were the main-stay of such transcriptomics until the recent revolution of high-throughput next-generation sequencing (NGS).
+It has revolutionized transcriptomics by enabling RNA analysis via the sequencing of complementary cDNA <span class="citation">(Wang, Gerstein, and Snyder <a href="#ref-wangRNASeqRevolutionaryTool2009">2009</a>)</span>.
+This is termed as RNA sequencing  (RNA-Seq) which has distinct advantages over the former approaches, such as its ability to detect transcripts that are not yet annotated, low background signal (in comparison to DNA microarrays), a large dynamic range of expression level, higher sensitivity, higher reproducibility, all of which allow for understanding the dynamic and complex nature of the transcriptome.</p>
+<div class="figure" style="text-align: center"><span id="fig:centralDog"></span>
+<img src="data/centralDogma.png" alt="blah blah" width="100%" />
+<p class="caption">
+Figure 1.7: blah blah
+</p>
+</div>
+<p>The type of information that RNA-Seq provides can be broadly classified into two categories:</p>
+<ul>
+<li><p>Qualitative data which includes identifying transcripts, identifying intron/extron boundaries, poly-A sites and transcriptional start sites (TSS) which in RNA-Seq terminology is commonly referred to as “annotation”.</p></li>
+<li><p>Quantitative data which includes measuring differences in expression, alternative TSS, alternative splicing, alternative polyadenylation between two or more treatments or groups.</p></li>
+</ul>
+<p>This power of sequencing RNA has led to RNA-Seq not only being limited to the genomics community but has also to it becoming a main-stay in the toolkit of all life science research communities. A typical RNA-Seq experiment can be split into three parts <span class="citation">(Conesa et al. <a href="#ref-conesaSurveyBestPractices2016a">2016</a>)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Pre Analysis
+<ul>
+<li>Wet-Lab (Designing the project, RNA extraction, purification and enrichment of mRNA, cDNA synthesis, fragmentation, adaptor ligation and amplification, cDNA libraries to be sequenced)</li>
+<li>Experimental Design (choosing the library type, sequencing legth, the number of replicates and sequencing depth). In the most common use-case of RNA-Seq analysis which is differential expression studies, two or more groups / conditions are defined. In this project, each differentiation run that produced CMs from iPSCs can be considered as a separate group.<br />
+</li>
+<li>Sequencing Design (spike-ins, randomization at library prep, randomization at sequencing run)</li>
+<li>Quality Control (raw reads, read alignment, quantification, reproducibility)</li>
+</ul></li>
+<li>Core Analysis
+<ul>
+<li>Transcriptomic Profiling (read alignment, transcript discovery, quantification level, quantification measure)</li>
+<li>Normalization (Z-scale, variance stabilized transformation, etc)</li>
+<li>Differential Expression</li>
+<li>Interpretation (functional profiling)</li>
+</ul></li>
+<li>Advanced Analysis
+<ul>
+<li>Visualization</li>
+<li>Integration (eQTL, ATAC-seq, ChIP-Seq, proteomics/metabolomics)</li>
+</ul></li>
+</ol>
+<p>The sucess of an RNA-Seq study depends on the choices and decisions made at each of these steps. Naturally, the real-world analysis of RNA-Seq data has as many variations as there are applications of the technology.</p>
+<div id="bulkrna" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Bulk RNA Seq</h3>
+<p>The RNA to be sequenced may be collected from samples containing either multiple (bulk) or single cells. Data obtained from the more established bulk sequencing represents the <em>average expression level</em> for each gene across the large population of input. This bulk RNA-Seq which is the main work horse of gene expression studies is adequate for comparative transcriptomics, wherein samples of the same tissue are compared across species, or for quantifying expression signatures from ensembles, such as in disease studies. However, it falls short in its ability to be an effective tool for studying heterogeneous systems, such as complex tissues (brain, heart, etc) or early developmental studies. It also fails to capture the stochastic nature of gene expression and spatial resolution can not be obtained. An ilustrated, simplistic example is shown in <a href="intro.html#fig:singleVsBulk">1.8</a>.</p>
+<div class="figure"><span id="fig:singleVsBulk"></span>
+<img src="data/bulkSingle.001.png" alt="Simplistic example " width="100%" />
+<p class="caption">
+Figure 1.8: Simplistic example
+</p>
+</div>
+</div>
+<div id="scrna" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Single-cell RNA Seq</h3>
+<p>Single-cell RNA-Seq  (scRNA-seq) is a new and active field of RNA-seq which arose to fulfill the unmet needs of bulk RNA-Seq. Despite being introduced in 2009 <span class="citation">(Tang et al. <a href="#ref-tangMRNASeqWholetranscriptomeAnalysis2009">2009</a>)</span>, it did not gain popularity until the advent of newer protocols and reduced sequencing costs much later. It measures the <em>distribution of expression levels</em> for each gene across a population of cells. It has revealed new, unknown cell types in what were considered to be well-studied and established diseases, such as the discovery of ionocyte cells, in cystic fibrosis <span class="citation">(Montoro et al. <a href="#ref-montoroRevisedAirwayEpithelial2018">2018</a>)</span>. Spatially resolved scRNA-Seq holds similar promises, revealing novel information on the extent of fetal marker gene expression in small populations of adult heart tissues <span class="citation">(pubmeddev and al et, <a href="#ref-pubmeddevSpatialDetectionFetal">n.d.</a>)</span>. Thus, novel biological questions addressing cell type identification, heterogeneity of cell responses, stochasticity of gene expression and inference of gene regulatory networks across cells can be studiesd. The applications of scRNA-Seq to novel biological questions and the computational and laboratory methods catering to it are advancing at such a rapid pace that even recent reviews <span class="citation">(Stegle, Teichmann, and Marioni <a href="#ref-stegleComputationalAnalyticalChallenges2015">2015</a>; Svensson, Vento-Tormo, and Teichmann <a href="#ref-svenssonExponentialScalingSinglecell2018">2018</a>)</span> are becoming outdated.</p>
+</div>
+</div>
+<div id="compdeconv" class="section level2">
+<h2><span class="header-section-number">1.4</span> Computational deconvolution</h2>
+<p>It is established that scRNA-Seq allows for unbiased transcriptional profiling of thousands of individual cells. Yet, the usage of this powerful technology is limited by its cost and impracticality with respect to analyses of large sample cohorts. Also, most clinical specimens are fixed, for example in formalin or embedded in paraffin, which renders its dissociation into intact single-cells impossible. To circumvent these limitations and utilize the specificity and accuracy of scRNA-Seq along with the ease of bulk of RNA-Seq, several groups around the world have developed <em>deconvolution</em> computational techniques <span class="citation">(Aran, Hu, and Butte <a href="#ref-aranXCellDigitallyPortraying2017">2017</a>; Becht et al. <a href="#ref-bechtEstimatingPopulationAbundance2016">2016</a>; Dong et al., <a href="#ref-dongSCDCBulkGene">n.d.</a>; Kang et al. <a href="#ref-kangCDSeqNovelComplete2019">2019</a>; Newman and Alizadeh <a href="#ref-newmanHighthroughputGenomicProfiling2016">2016</a>; Quon et al. <a href="#ref-quonComputationalPurificationIndividual2013">2013</a>; Racle et al. <a href="#ref-racleSimultaneousEnumerationCancer2017">2017</a>; Shen-Orr and Gaujoux <a href="#ref-shen-orrComputationalDeconvolutionExtracting2013">2013</a>)</span>. Deconvolution, in the realm of a sequencing, is a common umbrella term for a procedure that estimates the proportion of each cell type in a bulk sample. Flow cytometry and scRNA-Seq are experimental methods of deconvolution. Computational deconvolution leverages scRNA-Seq reference sets (or fluorescence-activated cell sorting (FACS)-sorted, purified bulk sets) for bulk gene expression deconvolution. A basic comparison of the available tools soon led to CIBERSORTx (<span class="citation">(Newman et al. <a href="#ref-newmanDeterminingCellType2019">2019</a>)</span>) as being currently at the forefront of deconvolution because unlike other methods it can:
+1.Leverage scRNA-Seq derived reference profiled for bulk tissue dissection
+2. Overcome technical variation arising from different platforms (eg., bulk RNA-Seq, scRNA-Seq, microarrays) and tissue preservation techniques
+3. Digitally “purify” cell-type specific expression profiles from bulk tissues without physical cell isolation.
+Briefly, most deconvolution algorithms, including CIBERSORTx, work to solve the following linear equations for <strong>f</strong>:
+<span class="math display">\[m = Hf\]</span>
+<em>m</em>: mixture gene expression profile (GEP) (to be deconvolved)</p>
+<p><em>f</em>: a vector of fraction of each cell type in a signature matrix (the unknown)</p>
+<p><em>H</em>: a <em>signature matrix</em> containing signature genes for cell subsets of interest</p>
+Both <em>m</em> and <em>B</em> are input requirements. Further analytics of deconvolution are outside the scope of this thesis and be found at <span class="citation">(Chen et al. <a href="#ref-chenProfilingTumorInfiltrating2018">2018</a>; Newman et al. <a href="#ref-newmanDeterminingCellType2019">2019</a>)</span>. With this framework, a relevant single-cell or bulk-sorted RNA sequencing data can be used to tease out molecular signatures of distinct cell types and these signatures can then be used to characterize cellular heterogeneity from bulk tissue transcriptomes without physical cell isolation, see <a href="intro.html#fig:deconv">1.9</a>.
+<div class="figure"><span id="fig:deconv"></span>
+<img src="data/deconv.png" alt="A caption" width="100%" />
+<p class="caption">
+Figure 1.9: A caption
+</p>
+</div>
+</div>
+<div id="exploratory-data-analysis-in-rna-sequencing" class="section level2">
+<h2><span class="header-section-number">1.5</span> Exploratory Data Analysis in RNA-Sequencing</h2>
+<p>These high-throughput gene expression technologies have become a common choice for addressing systems-level and molecular questions of biological phenomena.
+Yet, there is a growing concern that these approaches have not kept up to the hype <em>sequencing revolution</em>, possibly due to the fact that the interpretation of the data has lagged far behind its generation.
+As discussed by Hudson et al.,<span class="citation">(Hudson, Dalrymple, and Reverter <a href="#ref-hudsonDifferentialExpressionQuest2012">2012</a>)</span> in their opinion article, the rampant usage of small / curated lists of differentially expressed (DE)  genes are limiting and can possibly lead to misinterpretation or out-of-context conclusions.
+Thus other exploratory data analysis techniques could potentially be used along with DE to holistically interpret the data. Common techniques include clustering (hierarchical, k-means, etc) and dimension reduction (discussed below), which are used to detect unbiased/unpredicted patterns, confounding variables, and also allow to decide what more meaningful questions can be asked.</p>
+<div id="pca" class="section level3">
+<h3><span class="header-section-number">1.5.1</span> Principal Component Analysis (PCA)</h3>
+<p>High-dimensional data are common in today’s biology as they arise when several features, like the expression of many genes, are measured for multiple samples. This kind of data holds several challenges — high computational demand, an increased error rate due to multiple test corrections when testing each feature for association with an outcome. PCA is an unsupervised dimension reduction technique, that on any given dataset performs linear transformation and fits the data to a new coordinate system in such a way that maximum variance is explained by the first coordinate, and each subsequent coordinate is orthogonal to the last and explains progressively lesser variance. Each principal component thus sums up a certain percentage of the total variation in the dataset. In this way, a set of x correlated variables over y samples is transformed to a set of p uncorrelated principal components over the same samples. Where many variables correlate with one another, they contribute strongly to the same principal component. PCA can find patters without prior knowledge about whether samples come from different treatment groups or have phenotypic differences. PCA also allows for low-dimensional representation (eg, bi-plot) of the data, while retaining as much information as possible as most of the noise in the dataset is pushed to the last few principal components. The goal is to reduce the features’ dimensionality while only loosing a small amount of information.</p>
+<div class="figure"><span id="fig:pca"></span>
+<img src="data/pca.png" alt="This illustration shows that PC1 accounts for the difference between both variables A and B " width="100%" />
+<p class="caption">
+Figure 1.10: This illustration shows that PC1 accounts for the difference between both variables A and B
+</p>
+</div>
+</div>
+</div>
+<div id="rationale-for-the-current-work" class="section level2">
+<h2><span class="header-section-number">1.6</span> Rationale for the current work</h2>
+<p>Targeted Differentiation of hypoimmunogenic iPSCs into functional cell types and subsequent assembly into artificial tissues for organ repair and replacement holds great promise to overcome the current donor organ shortage. Translation into clinics require rigorous control and constant refinement of all process involved. RNA sequencing offers an in-depth view into the state of a cell (scRNA-seq) or a cell population (bulk RNA-Seq), and is ideally suited to describe the evolution of iPSCs along transient, morphologically not fully characterized states towards terminally differentiated cell.
+Knowledge about differentiation and differentiation protocols are other areas relevant to this project, that have been vastly improved by the usage sequencing technologies <span class="citation">(Burridge et al. <a href="#ref-burridgeProductionNovoCardiomyocytes2012">2012</a>; Cuomo et al. <a href="#ref-cuomoSinglecellRNAsequencingDifferentiating2020">2020</a>; Han et al. <a href="#ref-hanMappingHumanPluripotent2018">2018</a>; McCracken et al. <a href="#ref-mccrackenTranscriptionalDynamicsPluripotent2019">2019</a>; Müller et al. <a href="#ref-mullerHumanESCIPSCbased2012">2012</a>; Wesolowska-Andersen et al. <a href="#ref-wesolowska-andersenAnalysisDifferentiationProtocols2020">2020</a>)</span>. For instance the work of Wu et al <span class="citation">(Wu et al. <a href="#ref-wuComparativeAnalysisRefinement2018">2018</a>)</span> reviewd in <span class="citation">(Freedman <a href="#ref-freedmanBetterBeingSingle2019">2019</a>)</span>, where current protocols to generate kidney organoids from hiPSCs (meant as tissue replacement source) were evaluated using scRNA-Seq. The study showed that the organoid-derived cell types were immature, and contained a significant, 10-20%, percentage of cells which were non-renal. Overall, the study was a proof-of-concept of the power of scRNA-Seq technologies to characterize and improve organoid differentiation. Prof.Zimmermann’s research group has developed GMP compliant protocols for the differentiation of hiPSC to cardiomyocytes and stromal cells which are then used to make EHMs using optimized tissue engineering techniques. These are also intended to be a tissue replacement stratergy. Currently scRNA-Seq is not available but multiple bulk RNA-Seq data across several differentiation runs has been performed by the group. Also, this project aims at first characterizing the hiPSC induced cardiomyocytes and not the entire organoid/EHM, which would ideally be a continuation of the current work. Taken together, the availability of bulk RNA-Seq data and a relevant scRNA-Seq data set like that of <span class="citation">(Friedman et al. <a href="#ref-friedmanSingleCellTranscriptomicAnalysis2018">2018</a>)</span> along with accessible deconvolution techniques, like CIBERSORTx, the project aims at an in-depth characterization of hiPSC induced cardiomyocytes.</p>
+
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-aranXCellDigitallyPortraying2017">
+<p>Aran, Dvir, Zicheng Hu, and Atul J. Butte. 2017. “xCell: Digitally Portraying the Tissue Cellular Heterogeneity Landscape.” <em>Genome Biology</em> 18 (1): 220. <a href="https://doi.org/10.1186/s13059-017-1349-1">https://doi.org/10.1186/s13059-017-1349-1</a>.</p>
+</div>
+<div id="ref-bechtEstimatingPopulationAbundance2016">
+<p>Becht, Etienne, Nicolas A. Giraldo, Laetitia Lacroix, B’en’edicte Buttard, Nabila Elarouci, Florent Petitprez, Janick Selves, et al. 2016. “Estimating the Population Abundance of Tissue-Infiltrating Immune and Stromal Cell Populations Using Gene Expression.” <em>Genome Biology</em> 17 (1): 218. <a href="https://doi.org/10.1186/s13059-016-1070-5">https://doi.org/10.1186/s13059-016-1070-5</a>.</p>
+</div>
+<div id="ref-bergmannDynamicsCellGeneration2015">
+<p>Bergmann, Olaf, Sofia Zdunek, Anastasia Felker, Mehran Salehpour, Kanar Alkass, Samuel Bernard, Staffan L. Sjostrom, et al. 2015. “Dynamics of Cell Generation and Turnover in the Human Heart.” <em>Cell</em> 161 (7): 1566–75. <a href="https://doi.org/10.1016/j.cell.2015.05.026">https://doi.org/10.1016/j.cell.2015.05.026</a>.</p>
+</div>
+<div id="ref-bogomiakovaHomeStrangersIt2019">
+<p>Bogomiakova, M. E., A. V. Eremeev, and M. A. Lagarkova. 2019. “At Home Among Strangers: Is It Possible to Create Hypoimmunogenic Pluripotent Stem Cell Lines?” <em>Molecular Biology</em> 53 (5): 638–52. <a href="https://doi.org/10.1134/S0026893319050042">https://doi.org/10.1134/S0026893319050042</a>.</p>
+</div>
+<div id="ref-burridgeProductionNovoCardiomyocytes2012">
+<p>Burridge, Paul W., Gordon Keller, Joseph D. Gold, and Joseph C. Wu. 2012. “Production of de Novo Cardiomyocytes: Human Pluripotent Stem Cell Differentiation and Direct Reprogramming.” <em>Cell Stem Cell</em> 10 (1): 16–28. <a href="https://doi.org/10.1016/j.stem.2011.12.013">https://doi.org/10.1016/j.stem.2011.12.013</a>.</p>
+</div>
+<div id="ref-chenProfilingTumorInfiltrating2018">
+<p>Chen, Binbin, Michael S. Khodadoust, Chih Long Liu, Aaron M. Newman, and Ash A. Alizadeh. 2018. “Profiling Tumor Infiltrating Immune Cells with CIBERSORT.” <em>Methods in Molecular Biology (Clifton, N.J.)</em> 1711: 243–59. <a href="https://doi.org/10.1007/978-1-4939-7493-1_12">https://doi.org/10.1007/978-1-4939-7493-1_12</a>.</p>
+</div>
+<div id="ref-conesaSurveyBestPractices2016a">
+<p>Conesa, Ana, Pedro Madrigal, Sonia Tarazona, David Gomez-Cabrero, Alejandra Cervera, Andrew McPherson, Michał Wojciech Szcześniak, et al. 2016. “A Survey of Best Practices for RNA-Seq Data Analysis.” <em>Genome Biology</em> 17 (1): 13. <a href="https://doi.org/10.1186/s13059-016-0881-8">https://doi.org/10.1186/s13059-016-0881-8</a>.</p>
+</div>
+<div id="ref-cookAnnualGlobalEconomic2014">
+<p>Cook, Christopher, Graham Cole, Perviz Asaria, Richard Jabbour, and Darrel P. Francis. 2014. “The Annual Global Economic Burden of Heart Failure.” <em>International Journal of Cardiology</em> 171 (3): 368–76. <a href="https://doi.org/10.1016/j.ijcard.2013.12.028">https://doi.org/10.1016/j.ijcard.2013.12.028</a>.</p>
+</div>
+<div id="ref-cuomoSinglecellRNAsequencingDifferentiating2020">
+<p>Cuomo, Anna S. E., Daniel D. Seaton, Davis J. McCarthy, Iker Martinez, Marc Jan Bonder, Jose Garcia-Bernardo, Shradha Amatya, et al. 2020. “Single-Cell RNA-Sequencing of Differentiating iPS Cells Reveals Dynamic Genetic Effects on Gene Expression.” <em>Nature Communications</em> 11 (1): 1–14. <a href="https://doi.org/10.1038/s41467-020-14457-z">https://doi.org/10.1038/s41467-020-14457-z</a>.</p>
+</div>
+<div id="ref-dongSCDCBulkGene">
+<p>Dong, Meichen, Aatish Thennavan, Eugene Urrutia, Yun Li, Charles M. Perou, Fei Zou, and Yuchao Jiang. n.d. “SCDC: Bulk Gene Expression Deconvolution by Multiple Single-Cell RNA Sequencing References.” <em>Briefings in Bioinformatics</em>. <a href="https://doi.org/10.1093/bib/bbz166">https://doi.org/10.1093/bib/bbz166</a>.</p>
+</div>
+<div id="ref-EurotransplantStatistics">
+<p>“Eurotransplant - Statistics.” n.d. http://statistics.eurotransplant.org/.</p>
+</div>
+<div id="ref-freedmanBetterBeingSingle2019">
+<p>Freedman, Benjamin S. 2019. “Better Being Single? Omics Improves Kidney Organoids.” <em>Nephron</em> 141 (2): 128–32. <a href="https://doi.org/10.1159/000496009">https://doi.org/10.1159/000496009</a>.</p>
+</div>
+<div id="ref-friedmanSingleCellTranscriptomicAnalysis2018">
+<p>Friedman, Clayton E., Quan Nguyen, Samuel W. Lukowski, Abbigail Helfer, Han Sheng Chiu, Jason Miklas, Shiri Levy, et al. 2018. “Single-Cell Transcriptomic Analysis of Cardiac Differentiation from Human PSCs Reveals HOPX-Dependent Cardiomyocyte Maturation.” <em>Cell Stem Cell</em> 23 (4): 586–598.e8. <a href="https://doi.org/10.1016/j.stem.2018.09.009">https://doi.org/10.1016/j.stem.2018.09.009</a>.</p>
+</div>
+<div id="ref-gnecchiParacrineActionAccounts2005">
+<p>Gnecchi, Massimiliano, Huamei He, Olin D. Liang, Luis G. Melo, Fulvio Morello, Hui Mu, Nicolas Noiseux, et al. 2005. “Paracrine Action Accounts for Marked Protection of Ischemic Heart by Akt-Modified Mesenchymal Stem Cells.” <em>Nature Medicine</em> 11 (4): 367–68. <a href="https://doi.org/10.1038/nm0405-367">https://doi.org/10.1038/nm0405-367</a>.</p>
+</div>
+<div id="ref-hanMappingHumanPluripotent2018">
+<p>Han, Xiaoping, Haide Chen, Daosheng Huang, Huidong Chen, Lijiang Fei, Chen Cheng, He Huang, Guo-Cheng Yuan, and Guoji Guo. 2018. “Mapping Human Pluripotent Stem Cell Differentiation Pathways Using High Throughput Single-Cell RNA-Sequencing.” <em>Genome Biology</em> 19 (1): 47. <a href="https://doi.org/10.1186/s13059-018-1426-0">https://doi.org/10.1186/s13059-018-1426-0</a>.</p>
+</div>
+<div id="ref-hanGenerationHypoimmunogenicHuman2019">
+<p>Han, Xiao, Mengning Wang, Songwei Duan, Paul J. Franco, Jennifer Hyoje-Ryu Kenty, Preston Hedrick, Yulei Xia, et al. 2019. “Generation of Hypoimmunogenic Human Pluripotent Stem Cells.” <em>Proceedings of the National Academy of Sciences</em> 116 (21): 10441–6. <a href="https://doi.org/10.1073/pnas.1902566116">https://doi.org/10.1073/pnas.1902566116</a>.</p>
+</div>
+<div id="ref-hudsonDifferentialExpressionQuest2012">
+<p>Hudson, Nicholas J, Brian P Dalrymple, and Antonio Reverter. 2012. “Beyond Differential Expression: The Quest for Causal Mutations and Effector Molecules.” <em>BMC Genomics</em> 13 (July): 356. <a href="https://doi.org/10.1186/1471-2164-13-356">https://doi.org/10.1186/1471-2164-13-356</a>.</p>
+</div>
+<div id="ref-inagawaDirectReprogrammingMouse2013">
+<p>Inagawa, Kohei, and Masaki Ieda. 2013. “Direct Reprogramming of Mouse Fibroblasts into Cardiac Myocytes.” <em>Journal of Cardiovascular Translational Research</em> 6 (1): 37–45. <a href="https://doi.org/10.1007/s12265-012-9412-5">https://doi.org/10.1007/s12265-012-9412-5</a>.</p>
+</div>
+<div id="ref-kangCDSeqNovelComplete2019">
+<p>Kang, Kai, Qian Meng, Igor Shats, David M. Umbach, Melissa Li, Yuanyuan Li, Xiaoling Li, and Leping Li. 2019. “CDSeq: A Novel Complete Deconvolution Method for Dissecting Heterogeneous Samples Using Gene Expression Data.” <em>PLOS Computational Biology</em> 15 (12): e1007510. <a href="https://doi.org/10.1371/journal.pcbi.1007510">https://doi.org/10.1371/journal.pcbi.1007510</a>.</p>
+</div>
+<div id="ref-kubinOncostatinMajorMediator2011">
+<p>Kubin, Thomas, Jochen Pöling, Sawa Kostin, Praveen Gajawada, Stefan Hein, Wolfgang Rees, Astrid Wietelmann, et al. 2011. “Oncostatin M Is a Major Mediator of Cardiomyocyte Dedifferentiation and Remodeling.” <em>Cell Stem Cell</em> 9 (5): 420–32. <a href="https://doi.org/10.1016/j.stem.2011.08.013">https://doi.org/10.1016/j.stem.2011.08.013</a>.</p>
+</div>
+<div id="ref-lesyukCostofillnessStudiesHeart2018">
+<p>Lesyuk, Wladimir, Christine Kriza, and Peter Kolominsky-Rabas. 2018. “Cost-of-Illness Studies in Heart Failure: A Systematic Review 20042016.” <em>BMC Cardiovascular Disorders</em> 18 (1): 74. <a href="https://doi.org/10.1186/s12872-018-0815-3">https://doi.org/10.1186/s12872-018-0815-3</a>.</p>
+</div>
+<div id="ref-liaoEconomicBurdenHeart2008">
+<p>Liao, Lawrence, Larry A. Allen, and David J. Whellan. 2008. “Economic Burden of Heart Failure in the Elderly.” <em>PharmacoEconomics</em> 26 (6): 447–62. <a href="https://doi.org/10.2165/00019053-200826060-00001">https://doi.org/10.2165/00019053-200826060-00001</a>.</p>
+</div>
+<div id="ref-liuHumanEmbryonicStem2018">
+<p>Liu, Yen-Wen, Billy Chen, Xiulan Yang, James A. Fugate, Faith A. Kalucki, Akiko Futakuchi-Tsuchida, Larry Couture, et al. 2018. “Human Embryonic Stem Cell-Derived Cardiomyocytes Restore Function in Infarcted Hearts of Non-Human Primates.” <em>Nature Biotechnology</em> 36 (7): 597–605. <a href="https://doi.org/10.1038/nbt.4162">https://doi.org/10.1038/nbt.4162</a>.</p>
+</div>
+<div id="ref-martinTherapeuticApplicationPluripotent2017">
+<p>Martin, Ulrich. 2017. “Therapeutic Application of Pluripotent Stem Cells: Challenges and Risks.” <em>Frontiers in Medicine</em> 4. <a href="https://doi.org/10.3389/fmed.2017.00229">https://doi.org/10.3389/fmed.2017.00229</a>.</p>
+</div>
+<div id="ref-mccrackenTranscriptionalDynamicsPluripotent2019">
+<p>McCracken, Ian, Richard Taylor, Fatma Kok, Fernando de la Cuesta, Ross Dobie, Beth Henderson, Joanne Mountford, et al. 2019. “Transcriptional Dynamics of Pluripotent Stem Cell-Derived Endothelial Cell Differentiation Revealed by Single-Cell RNA Sequencing.” <em>Eur Heart J</em>. <a href="https://doi.org/10.1093/eurheartj/ehz351">https://doi.org/10.1093/eurheartj/ehz351</a>.</p>
+</div>
+<div id="ref-montoroRevisedAirwayEpithelial2018">
+<p>Montoro, Daniel T., Adam L. Haber, Moshe Biton, Vladimir Vinarsky, Brian Lin, Susan E. Birket, Feng Yuan, et al. 2018. “A Revised Airway Epithelial Hierarchy Includes CFTR-Expressing Ionocytes.” <em>Nature</em> 560 (7718): 319–24. <a href="https://doi.org/10.1038/s41586-018-0393-7">https://doi.org/10.1038/s41586-018-0393-7</a>.</p>
+</div>
+<div id="ref-moysesPlanetaryHealthAnthropocene2019">
+<p>Moysés, Samuel J., and Renata C. Soares. 2019. “Planetary Health in the Anthropocene.” <em>Health Promotion International</em> 34 (Supplement_1): i28–i36. <a href="https://doi.org/10.1093/heapro/daz012">https://doi.org/10.1093/heapro/daz012</a>.</p>
+</div>
+<div id="ref-mullerHumanESCIPSCbased2012">
+<p>Müller, Gerd A., Kirill V. Tarasov, Rebekah L. Gundry, and Kenneth R. Boheler. 2012. “Human ESC/iPSC-Based ‘Omics’ and Bioinformatics for Translational Research.” <em>Drug Discovery Today: Disease Models</em>, Induced pluripotent stem cells, 9 (4): e161–e170. <a href="https://doi.org/10.1016/j.ddmod.2012.02.003">https://doi.org/10.1016/j.ddmod.2012.02.003</a>.</p>
+</div>
+<div id="ref-nakatsujiHLAhaplotypeBankingIPS2008">
+<p>Nakatsuji, Norio, Fumiaki Nakajima, and Katsushi Tokunaga. 2008. “HLA-Haplotype Banking and iPS Cells.” <em>Nature Biotechnology</em> 26 (7): 739–40. <a href="https://doi.org/10.1038/nbt0708-739">https://doi.org/10.1038/nbt0708-739</a>.</p>
+</div>
+<div id="ref-neofytouHurdlesClinicalTranslation2015">
+<p>Neofytou, Evgenios, Connor Galen O’Brien, Larry A. Couture, and Joseph C. Wu. 2015. “Hurdles to Clinical Translation of Human Induced Pluripotent Stem Cells.” <em>The Journal of Clinical Investigation</em> 125 (7): 2551–7. <a href="https://doi.org/10.1172/JCI80575">https://doi.org/10.1172/JCI80575</a>.</p>
+</div>
+<div id="ref-newmanHighthroughputGenomicProfiling2016">
+<p>Newman, Aaron M., and Ash A. Alizadeh. 2016. “High-Throughput Genomic Profiling of Tumor-Infiltrating Leukocytes.” <em>Current Opinion in Immunology</em> 41 (August): 77–84. <a href="https://doi.org/10.1016/j.coi.2016.06.006">https://doi.org/10.1016/j.coi.2016.06.006</a>.</p>
+</div>
+<div id="ref-newmanDeterminingCellType2019">
+<p>Newman, Aaron M., Chlo’e B. Steen, Chih Long Liu, Andrew J. Gentles, Aadel A. Chaudhuri, Florian Scherer, Michael S. Khodadoust, et al. 2019. “Determining Cell Type Abundance and Expression from Bulk Tissues with Digital Cytometry.” <em>Nature Biotechnology</em> 37 (7): 773–82. <a href="https://doi.org/10.1038/s41587-019-0114-2">https://doi.org/10.1038/s41587-019-0114-2</a>.</p>
+</div>
+<div id="ref-nguyenPotentialStrategiesAddress2016">
+<p>Nguyen, Patricia K., Evgenios Neofytou, June-Wha Rhee, and Joseph C. Wu. 2016. “Potential Strategies to Address the Major Clinical Barriers Facing Stem Cell Regenerative Therapy for Cardiovascular Disease: A Review.” <em>JAMA Cardiology</em> 1 (8): 953–62. <a href="https://doi.org/10.1001/jamacardio.2016.2750">https://doi.org/10.1001/jamacardio.2016.2750</a>.</p>
+</div>
+<div id="ref-pubmeddevSpatialDetectionFetal">
+<p>pubmeddev, and Asp M. al et. n.d. “Spatial Detection of Fetal Marker Genes Expressed at Low Level in Adult Human Heart Tissue. - PubMed - NCBI.” https://www.ncbi.nlm.nih.gov/pubmed/29021611?dopt=Abstract.</p>
+</div>
+<div id="ref-quonComputationalPurificationIndividual2013">
+<p>Quon, Gerald, Syed Haider, Amit G. Deshwar, Ang Cui, Paul C. Boutros, and Quaid Morris. 2013. “Computational Purification of Individual Tumor Gene Expression Profiles Leads to Significant Improvements in Prognostic Prediction.” <em>Genome Medicine</em> 5 (3): 29. <a href="https://doi.org/10.1186/gm433">https://doi.org/10.1186/gm433</a>.</p>
+</div>
+<div id="ref-racleSimultaneousEnumerationCancer2017">
+<p>Racle, Julien, Kaat de Jonge, Petra Baumgaertner, Daniel E. Speiser, and David Gfeller. 2017. “Simultaneous Enumeration of Cancer and Immune Cell Types from Bulk Tumor Gene Expression Data.” <em>eLife</em>. https://elifesciences.org/articles/26476. <a href="https://doi.org/10.7554/eLife.26476">https://doi.org/10.7554/eLife.26476</a>.</p>
+</div>
+<div id="ref-sayedTranslationHumanInducedPluripotent2016">
+<p>Sayed, Nazish, Chun Liu, and Joseph C. Wu. 2016. “Translation of Human-Induced Pluripotent Stem Cells: From Clinical Trial in a Dish to Precision Medicine.” <em>Journal of the American College of Cardiology</em> 67 (18): 2161–76. <a href="https://doi.org/10.1016/j.jacc.2016.01.083">https://doi.org/10.1016/j.jacc.2016.01.083</a>.</p>
+</div>
+<div id="ref-sekineCardiacCellSheet2011">
+<p>Sekine, Hidekazu, Tatsuya Shimizu, Izumi Dobashi, Katsuhisa Matsuura, Nobuhisa Hagiwara, Masafumi Takahashi, Eiji Kobayashi, Masayuki Yamato, and Teruo Okano. 2011. “Cardiac Cell Sheet Transplantation Improves Damaged Heart Function via Superior Cell Survival in Comparison with Dissociated Cell Injection.” <em>Tissue Engineering. Part A</em> 17 (23-24): 2973–80. <a href="https://doi.org/10.1089/ten.tea.2010.0659">https://doi.org/10.1089/ten.tea.2010.0659</a>.</p>
+</div>
+<div id="ref-shen-orrComputationalDeconvolutionExtracting2013">
+<p>Shen-Orr, Shai S, and Renaud Gaujoux. 2013. “Computational Deconvolution: Extracting Cell Type-Specific Information from Heterogeneous Samples.” <em>Current Opinion in Immunology</em>, Special section: Systems biology and bioinformatics / Immunogenetics and transplantation, 25 (5): 571–78. <a href="https://doi.org/10.1016/j.coi.2013.09.015">https://doi.org/10.1016/j.coi.2013.09.015</a>.</p>
+</div>
+<div id="ref-stegleComputationalAnalyticalChallenges2015">
+<p>Stegle, Oliver, Sarah A. Teichmann, and John C. Marioni. 2015. “Computational and Analytical Challenges in Single-Cell Transcriptomics.” <em>Nature Reviews. Genetics</em> 16 (3): 133–45. <a href="https://doi.org/10.1038/nrg3833">https://doi.org/10.1038/nrg3833</a>.</p>
+</div>
+<div id="ref-svenssonExponentialScalingSinglecell2018">
+<p>Svensson, Valentine, Roser Vento-Tormo, and Sarah A. Teichmann. 2018. “Exponential Scaling of Single-Cell RNA-Seq in the Past Decade.” <em>Nature Protocols</em> 13 (4): 599–604. <a href="https://doi.org/10.1038/nprot.2017.149">https://doi.org/10.1038/nprot.2017.149</a>.</p>
+</div>
+<div id="ref-takahashiInductionPluripotentStem2007">
+<p>Takahashi, Kazutoshi, Koji Tanabe, Mari Ohnuki, Megumi Narita, Tomoko Ichisaka, Kiichiro Tomoda, and Shinya Yamanaka. 2007. “Induction of Pluripotent Stem Cells from Adult Human Fibroblasts by Defined Factors.” <em>Cell</em> 131 (5): 861–72. <a href="https://doi.org/10.1016/j.cell.2007.11.019">https://doi.org/10.1016/j.cell.2007.11.019</a>.</p>
+</div>
+<div id="ref-tangMRNASeqWholetranscriptomeAnalysis2009">
+<p>Tang, Fuchou, Catalin Barbacioru, Yangzhou Wang, Ellen Nordman, Clarence Lee, Nanlan Xu, Xiaohui Wang, et al. 2009. “mRNA-Seq Whole-Transcriptome Analysis of a Single Cell.” <em>Nature Methods</em> 6 (5): 377–82. <a href="https://doi.org/10.1038/nmeth.1315">https://doi.org/10.1038/nmeth.1315</a>.</p>
+</div>
+<div id="ref-taylorTrendsSurvivalDiagnosis2019">
+<p>Taylor, Clare J., Jos’e M. Ord’oñez-Mena, Andrea K. Roalfe, Sarah Lay-Flurrie, Nicholas R. Jones, Tom Marshall, and F. D. Richard Hobbs. 2019. “Trends in Survival After a Diagnosis of Heart Failure in the United Kingdom 2000-2017: Population Based Cohort Study.” <em>BMJ</em> 364 (February). <a href="https://doi.org/10.1136/bmj.l223">https://doi.org/10.1136/bmj.l223</a>.</p>
+</div>
+<div id="ref-taylorBankingHumanEmbryonic2005">
+<p>Taylor, Craig J, Eleanor M Bolton, Susan Pocock, Linda D Sharples, Roger A Pedersen, and J Andrew Bradley. 2005. “Banking on Human Embryonic Stem Cells: Estimating the Number of Donor Cell Lines Needed for HLA Matching.” <em>The Lancet</em> 366 (9502): 2019–25. <a href="https://doi.org/10.1016/S0140-6736(05)67813-0">https://doi.org/10.1016/S0140-6736(05)67813-0</a>.</p>
+</div>
+<div id="ref-thomsonEmbryonicStemCell1998">
+<p>Thomson, J. A., J. Itskovitz-Eldor, S. S. Shapiro, M. A. Waknitz, J. J. Swiergiel, V. S. Marshall, and J. M. Jones. 1998. “Embryonic Stem Cell Lines Derived from Human Blastocysts.” <em>Science (New York, N.Y.)</em> 282 (5391): 1145–7. <a href="https://doi.org/10.1126/science.282.5391.1145">https://doi.org/10.1126/science.282.5391.1145</a>.</p>
+</div>
+<div id="ref-tiburcyDefinedEngineeredHuman2017">
+<p>Tiburcy, Malte, James E. Hudson, Paul Balfanz, Susanne Schlick, Tim Meyer, Mei-Ling Chang Liao, Elif Levent, et al. 2017. “Defined Engineered Human Myocardium with Advanced Maturation for Applications in Heart Failure Modelling and Repair.” <em>Circulation</em> 135 (19): 1832–47. <a href="https://doi.org/10.1161/CIRCULATIONAHA.116.024145">https://doi.org/10.1161/CIRCULATIONAHA.116.024145</a>.</p>
+</div>
+<div id="ref-trivedi574RiskFactors2016">
+<p>Trivedi, J. R., E. Schumer, M. Black, H. T. Massey, A. Cheng, and M. S. Slaughter. 2016. “(574) - Risk Factors of Waiting List Mortality for Patients Awaiting Heart Transplant.” <em>The Journal of Heart and Lung Transplantation</em> 35 (4, Supplement): S214. <a href="https://doi.org/10.1016/j.healun.2016.01.602">https://doi.org/10.1016/j.healun.2016.01.602</a>.</p>
+</div>
+<div id="ref-wangRNASeqRevolutionaryTool2009">
+<p>Wang, Zhong, Mark Gerstein, and Michael Snyder. 2009. “RNA-Seq: A Revolutionary Tool for Transcriptomics.” <em>Nature Reviews. Genetics</em> 10 (1): 57–63. <a href="https://doi.org/10.1038/nrg2484">https://doi.org/10.1038/nrg2484</a>.</p>
+</div>
+<div id="ref-weinbergerCardiacRepairGuinea2016">
+<p>Weinberger, Florian, Kaja Breckwoldt, Simon Pecha, Allen Kelly, Birgit Geertz, Jutta Starbatty, Timur Yorgan, et al. 2016. “Cardiac Repair in Guinea Pigs with Human Engineered Heart Tissue from Induced Pluripotent Stem Cells.” <em>Science Translational Medicine</em> 8 (363): 363ra148. <a href="https://doi.org/10.1126/scitranslmed.aaf8781">https://doi.org/10.1126/scitranslmed.aaf8781</a>.</p>
+</div>
+<div id="ref-wesolowska-andersenAnalysisDifferentiationProtocols2020">
+<p>Wesolowska-Andersen, Agata, Rikke Rejnholdt Jensen, Marta P’erez Alc’antara, Nicola L. Beer, Claire Duff, Vibe Nylander, Matthew Gosden, et al. 2020. “Analysis of Differentiation Protocols Defines a Common Pancreatic Progenitor Molecular Signature and Guides Refinement of Endocrine Differentiation.” <em>Stem Cell Reports</em> 14 (1): 138–53. <a href="https://doi.org/10.1016/j.stemcr.2019.11.010">https://doi.org/10.1016/j.stemcr.2019.11.010</a>.</p>
+</div>
+<div id="ref-wuComparativeAnalysisRefinement2018">
+<p>Wu, Haojia, Kohei Uchimura, Erinn L. Donnelly, Yuhei Kirita, Samantha A. Morris, and Benjamin D. Humphreys. 2018. “Comparative Analysis and Refinement of Human PSC-Derived Kidney Organoid Differentiation with Single-Cell Transcriptomics.” <em>Cell Stem Cell</em> 23 (6): 869–881.e8. <a href="https://doi.org/10.1016/j.stem.2018.10.010">https://doi.org/10.1016/j.stem.2018.10.010</a>.</p>
+</div>
+<div id="ref-yangCardiacEngraftmentGeneticallyselected2015">
+<p>Yang, Tao, Michael Rubart, Mark H. Soonpaa, Michael Didié, Peter Christalla, Wolfram-Hubertus Zimmermann, and Loren J. Field. 2015. “Cardiac Engraftment of Genetically-Selected Parthenogenetic Stem Cell-Derived Cardiomyocytes.” <em>PloS One</em> 10 (6): e0131511. <a href="https://doi.org/10.1371/journal.pone.0131511">https://doi.org/10.1371/journal.pone.0131511</a>.</p>
+</div>
+<div id="ref-zimmermannEngineeredHeartTissue2006">
+<p>Zimmermann, Wolfram-Hubertus, Ivan Melnychenko, Gerald Wasmeier, Michael Didi’e, Hiroshi Naito, Uwe Nixdorff, Andreas Hess, et al. 2006. “Engineered Heart Tissue Grafts Improve Systolic and Diastolic Function in Infarcted Rat Hearts.” <em>Nature Medicine</em> 12 (4): 452–58. <a href="https://doi.org/10.1038/nm1394">https://doi.org/10.1038/nm1394</a>.</p>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Two main types of stem cell transplants. <em>Autologous</em> — uses a person’s own stem cells. <em>Allogenic</em> — uses stem cells from a donor whose HLA are acceptable matches to the patient’s.<a href="intro.html#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aims-and-objectives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
