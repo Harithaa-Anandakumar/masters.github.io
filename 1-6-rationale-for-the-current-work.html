@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="1.6 Rationale for the current work | _main.utf8" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="1.6 Rationale for the current work | _main.utf8">
+
+<title>1.6 Rationale for the current work | _main.utf8</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li class="has-sub"><a href="index.html#intro"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="1-1-need-for-better-therapeutics.html#need-for-better-therapeutics"><span class="toc-section-number">1.1</span> Need for better therapeutics</a></li>
+<li><a href="1-2-engineered-human-myocardium.html#engineered-human-myocardium"><span class="toc-section-number">1.2</span> Engineered Human Myocardium</a></li>
+<li class="has-sub"><a href="1-3-rna-sequencing.html#rna-sequencing"><span class="toc-section-number">1.3</span> RNA Sequencing</a><ul>
+<li><a href="1-3-rna-sequencing.html#bulk-rna-seq"><span class="toc-section-number">1.3.1</span> Bulk RNA Seq</a></li>
+<li><a href="1-3-rna-sequencing.html#single-cell-rna-seq"><span class="toc-section-number">1.3.2</span> Single-cell RNA Seq</a></li>
+</ul></li>
+<li><a href="1-4-computational-deconvolution.html#computational-deconvolution"><span class="toc-section-number">1.4</span> Computational deconvolution</a></li>
+<li><a href="1-5-principal-component-analysis-pca.html#principal-component-analysis-pca"><span class="toc-section-number">1.5</span> Principal Component Analysis (PCA)</a></li>
+<li><a href="1-6-rationale-for-the-current-work.html#rationale-for-the-current-work"><span class="toc-section-number">1.6</span> Rationale for the current work</a></li>
+</ul></li>
+<li><a href="2-aims-and-objectives.html#aims-and-objectives"><span class="toc-section-number">2</span> Aims and Objectives</a></li>
+<li><a href="3-materials-and-methods.html#materials-and-methods"><span class="toc-section-number">3</span> Materials and Methods</a></li>
+<li><a href="4-results-and-discussion.html#results-and-discussion"><span class="toc-section-number">4</span> Results and Discussion</a></li>
+<li><a href="5-conclusion-and-future-work.html#conclusion-and-future-work"><span class="toc-section-number">5</span> Conclusion and Future Work</a></li>
+<li><a href="6-references.html#references"><span class="toc-section-number">6</span> References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="rationale-for-the-current-work" class="section level2">
+<h2><span class="header-section-number">1.6</span> Rationale for the current work</h2>
+<p>Omics technologies — such as transcriptomics, genomics, proteomics and metabolomics — are shaping modern medicine and biology at an extraordinarily detailed molecular level. Cardiovascular sciences is a field that stands true to the previous statement. For example, an integrated omics approach was used to identify genes associated with isoproterenol-induced hypertrophy and resulting heart failure in the Hybrid Mouse Diversity Panel (HMDP) <span class="citation">(Chella Krishnan et al. <a href="#ref-chellakrishnanIntegrationMultiomicsData2018">2018</a>; Lin et al. <a href="#ref-linSystemsGeneticsApproach2018">2018</a>; Lusis et al. <a href="#ref-lusisHybridMouseDiversity2016">2016</a>; Park et al. <a href="#ref-parkGeneticRegulationFibroblast2018">2018</a>; Rau, Civelek, et al. <a href="#ref-rauSuiteToolsBiologists2017">2017</a>; Rau, Romay, et al. <a href="#ref-rauSystemsGeneticsApproach2017">2017</a>; Santolini et al. <a href="#ref-santoliniPersonalizedMultiomicsApproach2018">2018</a>; Shu et al. <a href="#ref-shuSharedGeneticRegulatory2017">2017</a>)</span>. Several candidate causal genes that determined the extent of cardiac hypertrophy were identified by integration of the cardiac transcriptome and genomic information. <em>Hes1</em> was particularly predicted to be causal in the progression to
+cardiac hypertrophy after heart damage. This study also showed that knocking down <em>Hes1</em> in ventricular myocytes had a 90% reduction in hypertrophy, confirming its role in hypertrophy <span class="citation">(Santolini et al. <a href="#ref-santoliniPersonalizedMultiomicsApproach2018">2018</a>)</span>. This is just one example of many where newer technologies are spearheading research in the cardiovascular field, detailed reviews of the topic can be found at <span class="citation">(Lau and Wu <a href="#ref-lauOmicsBigData2018">2018</a>; Leon-Mimila, Wang, and Huertas-Vazquez <a href="#ref-leon-mimilaRelevanceMultiOmicsStudies2019">2019</a>)</span>. Knowledge about differentiation and differentiation protocols are other areas relevant to this project, that have been vastly improved by the usage sequencing technologies <span class="citation">(Burridge et al. <a href="#ref-burridgeProductionNovoCardiomyocytes2012">2012</a>; Cuomo et al. <a href="#ref-cuomoSinglecellRNAsequencingDifferentiating2020">2020</a>; Han et al. <a href="#ref-hanMappingHumanPluripotent2018">2018</a>; McCracken et al. <a href="#ref-mccrackenTranscriptionalDynamicsPluripotent2019">2019</a>; Müller et al. <a href="#ref-mullerHumanESCIPSCbased2012">2012</a>; Wesolowska-Andersen et al. <a href="#ref-wesolowska-andersenAnalysisDifferentiationProtocols2020">2020</a>)</span>. This project is a starting point to produce a work similar to that of Wu et al <span class="citation">(Wu et al. <a href="#ref-wuComparativeAnalysisRefinement2018">2018</a>)</span> reviewd in <span class="citation">(Freedman <a href="#ref-freedmanBetterBeingSingle2019">2019</a>)</span>, where current protocols to generate kidney organoids from hiPSCs (meant as tissue replacement source) were evaluated using scRNA-Seq. The study showed that the organoid-derived cell types were immature, and contained a significant, 10-20%, percentage of cells which were non-renal. Overall, the study was a proof-of-concept of the power of scRNA-Seq technologies to characterize and improve organoid differentiation. Prof.Zimmermann’s research group has developed GMP compliant protocols for the differentiation of hiPSC to cardiomyocytes and stromal cells which are then used to make EHMs using optimized tissue engineering techniques. These are also intended to be a tissue replacement stratergy. Unlike Wu et al, currently scRNA-Seq is not available but multiple bulk RNA-Seq data across several differentiation runs has been performed by the group. Also, unlike Wu et al, this project aims at first characterizing the hiPSC induced cardiomyocytes and not the entire organoid/EHM, which would ideally be a continuation of the current work. Taken together, the availability of bulk RNA-Seq data and a relevant scRNA-Seq data set like that of <span class="citation">(Friedman et al. <a href="#ref-friedmanSingleCellTranscriptomicAnalysis2018">2018</a>)</span> along with accessible deconvolution techniques, like CIBERSORTx, the project aims at an in-depth characterization of hiPSC induced cardiomyocytes.</p>
+
+</div>
+<!-- </div> -->
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-burridgeProductionNovoCardiomyocytes2012">
+<p>Burridge, Paul W., Gordon Keller, Joseph D. Gold, and Joseph C. Wu. 2012. “Production of de Novo Cardiomyocytes: Human Pluripotent Stem Cell Differentiation and Direct Reprogramming.” <em>Cell Stem Cell</em> 10 (1): 16–28. <a href="https://doi.org/10.1016/j.stem.2011.12.013">https://doi.org/10.1016/j.stem.2011.12.013</a>.</p>
+</div>
+<div id="ref-chellakrishnanIntegrationMultiomicsData2018">
+<p>Chella Krishnan, Karthickeyan, Zeyneb Kurt, Rio Barrere-Cain, Simon Sabir, Aditi Das, Raquel Floyd, Laurent Vergnes, et al. 2018. “Integration of Multi-Omics Data from Mouse Diversity Panel Highlights Mitochondrial Dysfunction in Non-Alcoholic Fatty Liver Disease.” <em>Cell Systems</em> 6 (1): 103–115.e7. <a href="https://doi.org/10.1016/j.cels.2017.12.006">https://doi.org/10.1016/j.cels.2017.12.006</a>.</p>
+</div>
+<div id="ref-cuomoSinglecellRNAsequencingDifferentiating2020">
+<p>Cuomo, Anna S. E., Daniel D. Seaton, Davis J. McCarthy, Iker Martinez, Marc Jan Bonder, Jose Garcia-Bernardo, Shradha Amatya, et al. 2020. “Single-Cell RNA-Sequencing of Differentiating iPS Cells Reveals Dynamic Genetic Effects on Gene Expression.” <em>Nature Communications</em> 11 (1): 1–14. <a href="https://doi.org/10.1038/s41467-020-14457-z">https://doi.org/10.1038/s41467-020-14457-z</a>.</p>
+</div>
+<div id="ref-freedmanBetterBeingSingle2019">
+<p>Freedman, Benjamin S. 2019. “Better Being Single? Omics Improves Kidney Organoids.” <em>Nephron</em> 141 (2): 128–32. <a href="https://doi.org/10.1159/000496009">https://doi.org/10.1159/000496009</a>.</p>
+</div>
+<div id="ref-friedmanSingleCellTranscriptomicAnalysis2018">
+<p>Friedman, Clayton E., Quan Nguyen, Samuel W. Lukowski, Abbigail Helfer, Han Sheng Chiu, Jason Miklas, Shiri Levy, et al. 2018. “Single-Cell Transcriptomic Analysis of Cardiac Differentiation from Human PSCs Reveals HOPX-Dependent Cardiomyocyte Maturation.” <em>Cell Stem Cell</em> 23 (4): 586–598.e8. <a href="https://doi.org/10.1016/j.stem.2018.09.009">https://doi.org/10.1016/j.stem.2018.09.009</a>.</p>
+</div>
+<div id="ref-hanMappingHumanPluripotent2018">
+<p>Han, Xiaoping, Haide Chen, Daosheng Huang, Huidong Chen, Lijiang Fei, Chen Cheng, He Huang, Guo-Cheng Yuan, and Guoji Guo. 2018. “Mapping Human Pluripotent Stem Cell Differentiation Pathways Using High Throughput Single-Cell RNA-Sequencing.” <em>Genome Biology</em> 19 (1): 47. <a href="https://doi.org/10.1186/s13059-018-1426-0">https://doi.org/10.1186/s13059-018-1426-0</a>.</p>
+</div>
+<div id="ref-lauOmicsBigData2018">
+<p>Lau, Edward, and Joseph C Wu. 2018. “Omics, Big Data, and Precision Medicine in Cardiovascular Sciences.” <em>Circulation Research</em> 122 (9): 1165–8. <a href="https://doi.org/10.1161/CIRCRESAHA.118.313161">https://doi.org/10.1161/CIRCRESAHA.118.313161</a>.</p>
+</div>
+<div id="ref-leon-mimilaRelevanceMultiOmicsStudies2019">
+<p>Leon-Mimila, Paola, Jessica Wang, and Adriana Huertas-Vazquez. 2019. “Relevance of Multi-Omics Studies in Cardiovascular Diseases.” <em>Frontiers in Cardiovascular Medicine</em> 6. <a href="https://doi.org/10.3389/fcvm.2019.00091">https://doi.org/10.3389/fcvm.2019.00091</a>.</p>
+</div>
+<div id="ref-linSystemsGeneticsApproach2018">
+<p>Lin, Liang-Yu, Sunny Chun Chang, Jim O’Hearn, Simon T. Hui, Marcus Seldin, Pritha Gupta, Galyna Bondar, et al. 2018. “Systems Genetics Approach to Biomarker Discovery: GPNMB and Heart Failure in Mice and Humans.” <em>G3 (Bethesda, Md.)</em> 8 (11): 3499–3506. <a href="https://doi.org/10.1534/g3.118.200655">https://doi.org/10.1534/g3.118.200655</a>.</p>
+</div>
+<div id="ref-lusisHybridMouseDiversity2016">
+<p>Lusis, Aldons J., Marcus M. Seldin, Hooman Allayee, Brian J. Bennett, Mete Civelek, Richard C. Davis, Eleazar Eskin, et al. 2016. “The Hybrid Mouse Diversity Panel: A Resource for Systems Genetics Analyses of Metabolic and Cardiovascular Traits.” <em>Journal of Lipid Research</em> 57 (6): 925–42. <a href="https://doi.org/10.1194/jlr.R066944">https://doi.org/10.1194/jlr.R066944</a>.</p>
+</div>
+<div id="ref-mccrackenTranscriptionalDynamicsPluripotent2019">
+<p>McCracken, Ian, Richard Taylor, Fatma Kok, Fernando de la Cuesta, Ross Dobie, Beth Henderson, Joanne Mountford, et al. 2019. “Transcriptional Dynamics of Pluripotent Stem Cell-Derived Endothelial Cell Differentiation Revealed by Single-Cell RNA Sequencing.” <em>Eur Heart J</em>. <a href="https://doi.org/10.1093/eurheartj/ehz351">https://doi.org/10.1093/eurheartj/ehz351</a>.</p>
+</div>
+<div id="ref-mullerHumanESCIPSCbased2012">
+<p>Müller, Gerd A., Kirill V. Tarasov, Rebekah L. Gundry, and Kenneth R. Boheler. 2012. “Human ESC/iPSC-Based ‘Omics’ and Bioinformatics for Translational Research.” <em>Drug Discovery Today: Disease Models</em>, Induced pluripotent stem cells, 9 (4): e161–e170. <a href="https://doi.org/10.1016/j.ddmod.2012.02.003">https://doi.org/10.1016/j.ddmod.2012.02.003</a>.</p>
+</div>
+<div id="ref-parkGeneticRegulationFibroblast2018">
+<p>Park, Shuin, Sara Ranjbarvaziri, Fides D. Lay, Peng Zhao, Mark J. Miller, Jasmeet S. Dhaliwal, Adriana Huertas-Vazquez, et al. 2018. “Genetic Regulation of Fibroblast Activation and Proliferation in Cardiac Fibrosis.” <em>Circulation</em> 138 (12): 1224–35. <a href="https://doi.org/10.1161/CIRCULATIONAHA.118.035420">https://doi.org/10.1161/CIRCULATIONAHA.118.035420</a>.</p>
+</div>
+<div id="ref-rauSuiteToolsBiologists2017">
+<p>Rau, Christoph D., Mete Civelek, Calvin Pan, and Aldons J. Lusis. 2017. “A Suite of Tools for Biologists That Improve Accessibility and Visualization of Large Systems Genetics Datasets: Applications to the Hybrid Mouse Diversity Panel.” <em>Methods in Molecular Biology (Clifton, N.J.)</em> 1488: 153–88. <a href="https://doi.org/10.1007/978-1-4939-6427-7_7">https://doi.org/10.1007/978-1-4939-6427-7_7</a>.</p>
+</div>
+<div id="ref-rauSystemsGeneticsApproach2017">
+<p>Rau, Christoph D., Milagros C. Romay, Mary Tuteryan, Jessica J.-C. Wang, Marc Santolini, Shuxun Ren, Alain Karma, James N. Weiss, Yibin Wang, and Aldons J. Lusis. 2017. “Systems Genetics Approach Identifies Gene Pathways and Adamts2 as Drivers of Isoproterenol-Induced Cardiac Hypertrophy and Cardiomyopathy in Mice.” <em>Cell Systems</em> 4 (1): 121–128.e4. <a href="https://doi.org/10.1016/j.cels.2016.10.016">https://doi.org/10.1016/j.cels.2016.10.016</a>.</p>
+</div>
+<div id="ref-santoliniPersonalizedMultiomicsApproach2018">
+<p>Santolini, Marc, Milagros C. Romay, Clara L. Yukhtman, Christoph D. Rau, Shuxun Ren, Jeffrey J. Saucerman, Jessica J. Wang, et al. 2018. “A Personalized, Multiomics Approach Identifies Genes Involved in Cardiac Hypertrophy and Heart Failure.” <em>NPJ Systems Biology and Applications</em> 4: 12. <a href="https://doi.org/10.1038/s41540-018-0046-3">https://doi.org/10.1038/s41540-018-0046-3</a>.</p>
+</div>
+<div id="ref-shuSharedGeneticRegulatory2017">
+<p>Shu, Le, Kei Hang K. Chan, Guanglin Zhang, Tianxiao Huan, Zeyneb Kurt, Yuqi Zhao, Veronica Codoni, et al. 2017. “Shared Genetic Regulatory Networks for Cardiovascular Disease and Type 2 Diabetes in Multiple Populations of Diverse Ethnicities in the United States.” <em>PLoS Genetics</em> 13 (9): e1007040. <a href="https://doi.org/10.1371/journal.pgen.1007040">https://doi.org/10.1371/journal.pgen.1007040</a>.</p>
+</div>
+<div id="ref-wesolowska-andersenAnalysisDifferentiationProtocols2020">
+<p>Wesolowska-Andersen, Agata, Rikke Rejnholdt Jensen, Marta P’erez Alc’antara, Nicola L. Beer, Claire Duff, Vibe Nylander, Matthew Gosden, et al. 2020. “Analysis of Differentiation Protocols Defines a Common Pancreatic Progenitor Molecular Signature and Guides Refinement of Endocrine Differentiation.” <em>Stem Cell Reports</em> 14 (1): 138–53. <a href="https://doi.org/10.1016/j.stemcr.2019.11.010">https://doi.org/10.1016/j.stemcr.2019.11.010</a>.</p>
+</div>
+<div id="ref-wuComparativeAnalysisRefinement2018">
+<p>Wu, Haojia, Kohei Uchimura, Erinn L. Donnelly, Yuhei Kirita, Samantha A. Morris, and Benjamin D. Humphreys. 2018. “Comparative Analysis and Refinement of Human PSC-Derived Kidney Organoid Differentiation with Single-Cell Transcriptomics.” <em>Cell Stem Cell</em> 23 (6): 869–881.e8. <a href="https://doi.org/10.1016/j.stem.2018.10.010">https://doi.org/10.1016/j.stem.2018.10.010</a>.</p>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="1-5-principal-component-analysis-pca.html"><button class="btn btn-default">Previous</button></a>
+<a href="2-aims-and-objectives.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>

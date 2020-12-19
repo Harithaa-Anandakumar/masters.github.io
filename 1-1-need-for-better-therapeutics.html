@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="1.1 Need for better therapeutics | _main.utf8" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="1.1 Need for better therapeutics | _main.utf8">
+
+<title>1.1 Need for better therapeutics | _main.utf8</title>
+
+<script src="libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container-fluid main-container">
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li class="has-sub"><a href="index.html#intro"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="1-1-need-for-better-therapeutics.html#need-for-better-therapeutics"><span class="toc-section-number">1.1</span> Need for better therapeutics</a></li>
+<li><a href="1-2-engineered-human-myocardium.html#engineered-human-myocardium"><span class="toc-section-number">1.2</span> Engineered Human Myocardium</a></li>
+<li class="has-sub"><a href="1-3-rna-sequencing.html#rna-sequencing"><span class="toc-section-number">1.3</span> RNA Sequencing</a><ul>
+<li><a href="1-3-rna-sequencing.html#bulk-rna-seq"><span class="toc-section-number">1.3.1</span> Bulk RNA Seq</a></li>
+<li><a href="1-3-rna-sequencing.html#single-cell-rna-seq"><span class="toc-section-number">1.3.2</span> Single-cell RNA Seq</a></li>
+</ul></li>
+<li><a href="1-4-computational-deconvolution.html#computational-deconvolution"><span class="toc-section-number">1.4</span> Computational deconvolution</a></li>
+<li><a href="1-5-principal-component-analysis-pca.html#principal-component-analysis-pca"><span class="toc-section-number">1.5</span> Principal Component Analysis (PCA)</a></li>
+<li><a href="1-6-rationale-for-the-current-work.html#rationale-for-the-current-work"><span class="toc-section-number">1.6</span> Rationale for the current work</a></li>
+</ul></li>
+<li><a href="2-aims-and-objectives.html#aims-and-objectives"><span class="toc-section-number">2</span> Aims and Objectives</a></li>
+<li><a href="3-materials-and-methods.html#materials-and-methods"><span class="toc-section-number">3</span> Materials and Methods</a></li>
+<li><a href="4-results-and-discussion.html#results-and-discussion"><span class="toc-section-number">4</span> Results and Discussion</a></li>
+<li><a href="5-conclusion-and-future-work.html#conclusion-and-future-work"><span class="toc-section-number">5</span> Conclusion and Future Work</a></li>
+<li><a href="6-references.html#references"><span class="toc-section-number">6</span> References</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="need-for-better-therapeutics" class="section level2">
+<h2><span class="header-section-number">1.1</span> Need for better therapeutics</h2>
+<p>Although modern medicine has vastly improved the management of heart failure it still remains a debilitating disease which would immensely benefit from newer therapies.
+One of the most straight-forward approaches would be to simply address the underlying pathology of HF, wherein “vital/fresh” cardiomyocytes can be supplemented to counteract the progressive loss of cardiomyocytes in a terminally-differentiated, post-mitotic heart <span class="citation">(Bergmann et al. <a href="#ref-bergmannDynamicsCellGeneration2015">2015</a>)</span>. This has been made possible largely due to the introduction of human embryonic <span class="citation">(Thomson et al. <a href="#ref-thomsonEmbryonicStemCell1998">1998</a>)</span> and induced pluripotent stem cells <span class="citation">(Takahashi et al. <a href="#ref-takahashiInductionPluripotentStem2007">2007</a>)</span> along with defined protocols of directed differentiation to a cardiac lineage/cell fate, covered in the review <span class="citation">(Burridge et al. <a href="#ref-burridgeProductionNovoCardiomyocytes2012">2012</a>)</span>. However, this is fraught with its own key limitation: lack of long term engraftment of cardiomyocytes <span class="citation">(Nguyen et al. <a href="#ref-nguyenPotentialStrategiesAddress2016">2016</a>)</span>. Several other stratergies to strenghten/remuscularize the heart such as, converting scar into healthy heart muscle <span class="citation">(Inagawa and Ieda <a href="#ref-inagawaDirectReprogrammingMouse2013">2013</a>)</span>,inducing endogenous cardiomyocyte regeneration and proliferation <span class="citation">(Kubin et al. <a href="#ref-kubinOncostatinMajorMediator2011">2011</a>)</span>, and methods to save the remaining cardiomyocytes from cell death by modulating paracrine factors <span class="citation">(Gnecchi et al. <a href="#ref-gnecchiParacrineActionAccounts2005">2005</a>)</span> have been investigated. Despite the limitation in long term engraftment, cardiomyocyte implantation remains the most plausible option in a translational and mechanisitic stand point. It is currently known that cardiomyocytes supplemented as a cell injection have the worst retention and epicardial delivery of cardiomyocytes as tissue engineered patches show an improved retention <span class="citation">(Sekine et al. <a href="#ref-sekineCardiacCellSheet2011">2011</a>)</span>. Animal studies indicate that transplantation of engineered heart muscle (EHM) , made from human induced pluripotent stem cells (hIPSCs) , to a failing heart as a means of remuscularization showed improved cardiomyocyte proliferation, vascularization, unimpaired electrical coupling and improved left ventricular function. Additionally, these engineered patches have also not shown to be associated with an increased propensity for arrhythmia <span class="citation">(Weinberger et al. <a href="#ref-weinbergerCardiacRepairGuinea2016">2016</a>; Yang et al. <a href="#ref-yangCardiacEngraftmentGeneticallyselected2015">2015</a>; Zimmermann et al. <a href="#ref-zimmermannEngineeredHeartTissue2006">2006</a>)</span>. More recently a macaque model of heart failure (with human-like cardiovascular physiology) studied by <span class="citation">(Liu et al. <a href="#ref-liuHumanEmbryonicStem2018">2018</a>)</span>, showed near normal levels of contractile function after 3 months of transplantation of cardiomyocytes derived from  human embryonic stem cells (hESCs). Collectively, these preclinical studies hold promise for the utilization of cardiomyocytes and EHMs thereby derived as a potential therapeutic source for failing human hearts.</p>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-bergmannDynamicsCellGeneration2015">
+<p>Bergmann, Olaf, Sofia Zdunek, Anastasia Felker, Mehran Salehpour, Kanar Alkass, Samuel Bernard, Staffan L. Sjostrom, et al. 2015. “Dynamics of Cell Generation and Turnover in the Human Heart.” <em>Cell</em> 161 (7): 1566–75. <a href="https://doi.org/10.1016/j.cell.2015.05.026">https://doi.org/10.1016/j.cell.2015.05.026</a>.</p>
+</div>
+<div id="ref-burridgeProductionNovoCardiomyocytes2012">
+<p>Burridge, Paul W., Gordon Keller, Joseph D. Gold, and Joseph C. Wu. 2012. “Production of de Novo Cardiomyocytes: Human Pluripotent Stem Cell Differentiation and Direct Reprogramming.” <em>Cell Stem Cell</em> 10 (1): 16–28. <a href="https://doi.org/10.1016/j.stem.2011.12.013">https://doi.org/10.1016/j.stem.2011.12.013</a>.</p>
+</div>
+<div id="ref-gnecchiParacrineActionAccounts2005">
+<p>Gnecchi, Massimiliano, Huamei He, Olin D. Liang, Luis G. Melo, Fulvio Morello, Hui Mu, Nicolas Noiseux, et al. 2005. “Paracrine Action Accounts for Marked Protection of Ischemic Heart by Akt-Modified Mesenchymal Stem Cells.” <em>Nature Medicine</em> 11 (4): 367–68. <a href="https://doi.org/10.1038/nm0405-367">https://doi.org/10.1038/nm0405-367</a>.</p>
+</div>
+<div id="ref-inagawaDirectReprogrammingMouse2013">
+<p>Inagawa, Kohei, and Masaki Ieda. 2013. “Direct Reprogramming of Mouse Fibroblasts into Cardiac Myocytes.” <em>Journal of Cardiovascular Translational Research</em> 6 (1): 37–45. <a href="https://doi.org/10.1007/s12265-012-9412-5">https://doi.org/10.1007/s12265-012-9412-5</a>.</p>
+</div>
+<div id="ref-kubinOncostatinMajorMediator2011">
+<p>Kubin, Thomas, Jochen Pöling, Sawa Kostin, Praveen Gajawada, Stefan Hein, Wolfgang Rees, Astrid Wietelmann, et al. 2011. “Oncostatin M Is a Major Mediator of Cardiomyocyte Dedifferentiation and Remodeling.” <em>Cell Stem Cell</em> 9 (5): 420–32. <a href="https://doi.org/10.1016/j.stem.2011.08.013">https://doi.org/10.1016/j.stem.2011.08.013</a>.</p>
+</div>
+<div id="ref-liuHumanEmbryonicStem2018">
+<p>Liu, Yen-Wen, Billy Chen, Xiulan Yang, James A. Fugate, Faith A. Kalucki, Akiko Futakuchi-Tsuchida, Larry Couture, et al. 2018. “Human Embryonic Stem Cell-Derived Cardiomyocytes Restore Function in Infarcted Hearts of Non-Human Primates.” <em>Nature Biotechnology</em> 36 (7): 597–605. <a href="https://doi.org/10.1038/nbt.4162">https://doi.org/10.1038/nbt.4162</a>.</p>
+</div>
+<div id="ref-nguyenPotentialStrategiesAddress2016">
+<p>Nguyen, Patricia K., Evgenios Neofytou, June-Wha Rhee, and Joseph C. Wu. 2016. “Potential Strategies to Address the Major Clinical Barriers Facing Stem Cell Regenerative Therapy for Cardiovascular Disease: A Review.” <em>JAMA Cardiology</em> 1 (8): 953–62. <a href="https://doi.org/10.1001/jamacardio.2016.2750">https://doi.org/10.1001/jamacardio.2016.2750</a>.</p>
+</div>
+<div id="ref-sekineCardiacCellSheet2011">
+<p>Sekine, Hidekazu, Tatsuya Shimizu, Izumi Dobashi, Katsuhisa Matsuura, Nobuhisa Hagiwara, Masafumi Takahashi, Eiji Kobayashi, Masayuki Yamato, and Teruo Okano. 2011. “Cardiac Cell Sheet Transplantation Improves Damaged Heart Function via Superior Cell Survival in Comparison with Dissociated Cell Injection.” <em>Tissue Engineering. Part A</em> 17 (23-24): 2973–80. <a href="https://doi.org/10.1089/ten.tea.2010.0659">https://doi.org/10.1089/ten.tea.2010.0659</a>.</p>
+</div>
+<div id="ref-takahashiInductionPluripotentStem2007">
+<p>Takahashi, Kazutoshi, Koji Tanabe, Mari Ohnuki, Megumi Narita, Tomoko Ichisaka, Kiichiro Tomoda, and Shinya Yamanaka. 2007. “Induction of Pluripotent Stem Cells from Adult Human Fibroblasts by Defined Factors.” <em>Cell</em> 131 (5): 861–72. <a href="https://doi.org/10.1016/j.cell.2007.11.019">https://doi.org/10.1016/j.cell.2007.11.019</a>.</p>
+</div>
+<div id="ref-thomsonEmbryonicStemCell1998">
+<p>Thomson, J. A., J. Itskovitz-Eldor, S. S. Shapiro, M. A. Waknitz, J. J. Swiergiel, V. S. Marshall, and J. M. Jones. 1998. “Embryonic Stem Cell Lines Derived from Human Blastocysts.” <em>Science (New York, N.Y.)</em> 282 (5391): 1145–7. <a href="https://doi.org/10.1126/science.282.5391.1145">https://doi.org/10.1126/science.282.5391.1145</a>.</p>
+</div>
+<div id="ref-weinbergerCardiacRepairGuinea2016">
+<p>Weinberger, Florian, Kaja Breckwoldt, Simon Pecha, Allen Kelly, Birgit Geertz, Jutta Starbatty, Timur Yorgan, et al. 2016. “Cardiac Repair in Guinea Pigs with Human Engineered Heart Tissue from Induced Pluripotent Stem Cells.” <em>Science Translational Medicine</em> 8 (363): 363ra148. <a href="https://doi.org/10.1126/scitranslmed.aaf8781">https://doi.org/10.1126/scitranslmed.aaf8781</a>.</p>
+</div>
+<div id="ref-yangCardiacEngraftmentGeneticallyselected2015">
+<p>Yang, Tao, Michael Rubart, Mark H. Soonpaa, Michael Didié, Peter Christalla, Wolfram-Hubertus Zimmermann, and Loren J. Field. 2015. “Cardiac Engraftment of Genetically-Selected Parthenogenetic Stem Cell-Derived Cardiomyocytes.” <em>PloS One</em> 10 (6): e0131511. <a href="https://doi.org/10.1371/journal.pone.0131511">https://doi.org/10.1371/journal.pone.0131511</a>.</p>
+</div>
+<div id="ref-zimmermannEngineeredHeartTissue2006">
+<p>Zimmermann, Wolfram-Hubertus, Ivan Melnychenko, Gerald Wasmeier, Michael Didi’e, Hiroshi Naito, Uwe Nixdorff, Andreas Hess, et al. 2006. “Engineered Heart Tissue Grafts Improve Systolic and Diastolic Function in Infarcted Rat Hearts.” <em>Nature Medicine</em> 12 (4): 452–58. <a href="https://doi.org/10.1038/nm1394">https://doi.org/10.1038/nm1394</a>.</p>
+</div>
+</div>
+<p style="text-align: center;">
+<a href="index.html"><button class="btn btn-default">Previous</button></a>
+<a href="1-2-engineered-human-myocardium.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+$(document).ready(function () {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+});
+
+</script>
+
+</body>
+</html>
